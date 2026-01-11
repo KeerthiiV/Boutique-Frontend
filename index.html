@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Boutique | Luxury Fashion</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ELEGANCE</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#products">Collections</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="login.html">Login</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-dark rounded-0 px-4" href="registration.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero-overlay"></div>
+                <img src="mohey-indira-nagar-lucknow-lucknow-saree-retailers-jlj70v.jpg" class="d-block w-100 hero-img" alt="Fashion">
+                <div class="carousel-caption" data-aos="fade-up">
+                    <span class="text-uppercase ls-3 mb-3 d-block">Est. 2026</span>
+                    <h1 class="display-1 fw-bold">Timeless Grace</h1>
+                    <p class="lead mb-4">Discover our exclusive designer collection handcrafted for you.</p>
+                    <a href="#products" class="btn btn-custom">EXPLORE COLLECTION</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container my-5 py-5">
+        <div class="row text-center g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="p-4 feature-card">
+                    <h5 class="text-gold text-uppercase ls-2">Free Shipping</h5>
+                    <p class="text-muted small">On all orders above ₹5,000</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-4 feature-card">
+                    <h5 class="text-gold text-uppercase ls-2">Custom Tailoring</h5>
+                    <p class="text-muted small">Precision fit by master artisans</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-4 feature-card border-0">
+                    <h5 class="text-gold text-uppercase ls-2">24/7 Support</h5>
+                    <p class="text-muted small">Dedicated luxury concierge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="container mb-5 pb-5">
+        <div class="text-center mb-5" data-aos="fade-down">
+            <h2 class="display-5 fw-bold">Featured Collections</h2>
+            <div class="gold-divider mx-auto"></div>
+        </div>
+        
+        <div class="row g-5">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="product-card shadow-hover">
+                    <div class="img-container">
+                        <img src="images/images (14).jpeg" class="img-fluid" alt="Saree">
+                        <div class="img-overlay">
+                            <button class="btn btn-light btn-sm rounded-0" data-bs-toggle="modal" data-bs-target="#quickView">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="pt-4 text-center">
+                        <p class="text-muted small mb-1 text-uppercase">Handcrafted Silk</p>
+                        <h5 class="fw-bold">Designer Silk Saree</h5>
+                        <p class="text-gold fw-bold">₹3,999</p>
+                        <button class="btn btn-custom w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card shadow-hover">
+                    <div class="img-container">
+                        <img src="images/image_original_zoom.jpeg" class="img-fluid" alt="Dress">
+                        <div class="img-overlay">
+                            <button class="btn btn-light btn-sm rounded-0">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="pt-4 text-center">
+                        <p class="text-muted small mb-1 text-uppercase">Evening Wear</p>
+                        <h5 class="fw-bold">Royal Party Wear</h5>
+                        <p class="text-gold fw-bold">₹2,499</p>
+                        <button class="btn btn-custom w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card shadow-hover">
+                    <div class="img-container">
+                        <img src="images/images (22).jpeg" class="img-fluid" alt="Kurthi">
+                        <div class="img-overlay">
+                            <button class="btn btn-light btn-sm rounded-0">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="pt-4 text-center">
+                        <p class="text-muted small mb-1 text-uppercase">Ethnic Daily</p>
+                        <h5 class="fw-bold">Embroidered Kurthi</h5>
+                        <p class="text-gold fw-bold">₹1,299</p>
+                        <button class="btn btn-custom w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container text-center">
+            <h3 class="ls-3 mb-4">ELEGANCE</h3>
+            <p class="text-secondary small mb-4">Join our newsletter for exclusive early access to new drops.</p>
+            <div class="d-flex justify-content-center mb-5">
+                <input type="email" class="form-control rounded-0 bg-transparent text-white border-secondary w-25" placeholder="Email Address">
+                <button class="btn btn-custom border-white ms-2">JOIN</button>
+            </div>
+            <hr class="border-secondary mb-4">
+            <p class="small opacity-50">&copy; 2026 Elegance Boutique | Crafted for Excellence</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>

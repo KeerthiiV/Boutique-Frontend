@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Elegance Boutique</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .sidebar { background: #121212; min-height: 100vh; color: white; transition: 0.3s; }
+        .nav-link-dash { color: #888; padding: 12px 20px; display: block; text-decoration: none; font-size: 0.9rem; }
+        .nav-link-dash:hover, .nav-link-dash.active { color: #c5a059; background: #1a1a1a; }
+        .content-area { background: #f8f9fa; min-height: 100vh; padding: 40px; }
+        .card { border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-radius: 0; }
+        .role-badge { letter-spacing: 2px; font-size: 0.7rem; padding: 5px 12px; }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block sidebar p-0">
+            <div class="p-4 border-bottom border-secondary mb-3 text-center">
+                <h5 class="ls-2 text-white">ELEGANCE</h5>
+                <span id="displayRole" class="badge bg-outline-gold role-badge border border-warning text-warning">ROLE</span>
+            </div>
+            <div id="sidebarMenu">
+                </div>
+            <a href="javascript:void(0)" onclick="logout()" class="nav-link-dash mt-5 text-danger border-top border-secondary pt-4">
+                <i class="bi bi-box-arrow-left me-2"></i> Logout
+            </a>
+        </nav>
+
+        <main class="col-md-10 content-area">
+            <div id="dashboardContent">
+                </div>
+        </main>
+    </div>
+</div>
+
+<script>
+    // 1. AUTHENTICATION CHECK
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    if (!user) { window.location.href = 'login.html'; }
+
+    document.getElementById('displayRole').innerText = user.role.toUpperCase();
+
+    // 2. DASHBOARD MODULES
+    const modules = {
+        Admin: {
+            sidebar: `
+                <a href="#" class="nav-link-dash active"><i class="bi bi-cpu me-2"></i> System Overview</a>
+                <a href="#" class="nav-link-dash"><i class="bi bi-people me-2"></i> User Management</a>
+                <a href="#" class="nav-link-dash"><i class="bi bi-graph-up me-2"></i> Financial Reports</a>
+                <a href="#" class="nav-link-dash"><i class="bi bi-gear me-2"></i> Global Settings</a>`,
+            content: `
+                <h2 class="fw-bold mb-4">Administrator Control Panel</h2>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3"><div class="card p-3"><h6>Total Revenue</h6><h3>₹12,40,000</h3></div></div>
+                    <div class="col-md-3"><div class="card p-3"><h6>Active Users</h6><h3>1,402</h3></div></div>
+                    <div class="col-md-3"><div class="card p-3"><h6>Server Status</h6><h3 class="text-success">Online</h3></div></div>
+                </div>
+                <div class="card p-4">
+                    <h5>User Registration Logs</h5>
+                    <table class="table mt-3"><thead><tr><th>User</th><th>Action</th><th>Time</th></tr></thead>
+                    <tbody><tr><td>Sales_John</td><td>Updated Inventory</td><td>2 mins ago</td></tr></tbody></table>
+                </div>`
+        },
+        Client: {
+    sidebar: `
+        <a href="#" class="nav-link-dash active"><i class="bi bi-grid me-2"></i> Shop Collection</a>
+        <a href="#" class="nav-link-dash"><i class="bi bi-bag-heart me-2"></i> My Wishlist</a>
+        <a href="#" class="nav-link-dash"><i class="bi bi-truck me-2"></i> Track Orders</a>
+        <a href="#" class="nav-link-dash"><i class="bi bi-person me-2"></i> My Profile</a>`,
+    content: `
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold m-0">Welcome, ${user.email.split('@')[0]}</h2>
+            <div class="badge bg-dark p-2 px-3 rounded-0">GOLD MEMBER</div>
+        </div>
+
+        <h5 class="text-uppercase ls-2 mb-4 text-muted" style="font-size: 0.8rem;">Curated for You</h5>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 product-card border-0 shadow-sm">
+                    <img src="images/images (14).jpeg" class="card-img-top rounded-0" alt="Silk Saree" style="height: 300px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold mb-1">Banarasi Silk Saree</h6>
+                        <p class="text-gold small mb-3">₹12,500</p>
+                        <button class="btn btn-outline-dark btn-sm w-100 rounded-0">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 product-card border-0 shadow-sm">
+                    <img src="images/image_original_zoom.jpeg" class="card-img-top rounded-0" alt="Lehenga" style="height: 300px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold mb-1">Velvet Bridal Lehenga</h6>
+                        <p class="text-gold small mb-3">₹45,000</p>
+                        <button class="btn btn-outline-dark btn-sm w-100 rounded-0">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 product-card border-0 shadow-sm">
+                    <img src="images/images (22).jpeg" class="card-img-top rounded-0" alt="Kurthi" style="height: 300px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold mb-1">Hand-Embroidered Kurthi</h6>
+                        <p class="text-gold small mb-3">₹3,200</p>
+                        <button class="btn btn-outline-dark btn-sm w-100 rounded-0">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card p-4 border-0 shadow-sm bg-white">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-clock-history me-2"></i>Recent Order Status</h5>
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead class="table-light">
+                                <tr class="small text-uppercase">
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ELG-8821</td>
+                                    <td>Jan 08, 2026</td>
+                                    <td>₹3,999</td>
+                                    <td><span class="badge bg-info-subtle text-info px-3">Processing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>`
+        },
+        Sales: {
+            sidebar: `
+                <a href="#" class="nav-link-dash active"><i class="bi bi-tags me-2"></i> Product Pricing</a>
+                <a href="#" class="nav-link-dash"><i class="bi bi-lightning me-2"></i> Flash Sales</a>
+                <a href="#" class="nav-link-dash"><i class="bi bi-chat-dots me-2"></i> Inquiries</a>`,
+            content: `
+                <h2 class="fw-bold mb-4">Sales & Marketing Hub</h2>
+                <div class="card p-4 mb-4">
+                    <h5>Inventory Price Control</h5>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><p>Silk Saree</p></div>
+                        <div class="col-md-4"><input type="text" class="form-control" value="₹3,999"></div>
+                        <div class="col-md-2"><button class="btn btn-dark btn-sm rounded-0">Update</button></div>
+                    </div>
+                </div>`
+        },
+        Delivery: {
+            sidebar: `
+                <a href="#" class="nav-link-dash active"><i class="bi bi-map me-2"></i> Current Route</a>
+                <a href="#" class="nav-link-dash"><i class="bi bi-check-circle me-2"></i> Completed</a>`,
+            content: `
+                <h2 class="fw-bold mb-4">Delivery Partner Portal</h2>
+                <div class="card p-4 border-start border-warning border-4">
+                    <h6 class="text-warning text-uppercase">Urgent Pickup</h6>
+                    <h4>Order #8829 - Palakkad</h4>
+                    <p class="text-muted">Customer: Mrs. Shruthi | Contact: 9876543210</p>
+                    <button class="btn btn-warning w-25 rounded-0">Mark Picked Up</button>
+                </div>`
+        }
+    };
+
+    // 3. RENDER THE VIEW
+    const roleData = modules[user.role];
+    document.getElementById('sidebarMenu').innerHTML = roleData.sidebar;
+    document.getElementById('dashboardContent').innerHTML = roleData.content;
+
+    // 4. LOGOUT
+    function logout() {
+        localStorage.removeItem('currentUser');
+        window.location.href = 'login.html';
+    }
+</script>
+</body>
+</html>
