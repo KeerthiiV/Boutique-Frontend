@@ -6,53 +6,40 @@
     <title>Dashboard | Elegance Boutique</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Royal Plum Palette Variables */
-        :root {
-            --plum-accent: #926c9e;    
-            --deep-plum: #4b3648;      
-            --plum-soft: #f4eff5;      
-            --blush-light: #fdfafc;    
-        }
-
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            background: var(--blush-light); 
-            color: var(--deep-plum);
-        }
-
-        /* Sidebar Styling */
         .sidebar { 
-            background: var(--plum-soft); 
-            min-height: 100vh; 
-            border-right: 1px solid rgba(146, 108, 158, 0.2); 
-            transition: 0.3s; 
+           background-color: #e5f0d5;
+           min-height: 100vh;
+           border-right: 1px solid var(--border-color); 
         }
 
         .sidebar h5 { 
-            color: var(--plum-accent); 
+            color: var(--primary-text); 
             font-family: 'Playfair Display', serif; 
         }
 
         .nav-link-dash { 
-            color: var(--deep-plum); 
-            padding: 12px 25px; 
-            display: block; 
-            text-decoration: none; 
-            font-size: 0.9rem; 
+            color: var(--secondary-text);
+            padding: 12px 25px;
+            display: block;
+            text-decoration: none;
             border-left: 4px solid transparent;
             transition: 0.2s;
         }
 
         .nav-link-dash:hover, .nav-link-dash.active { 
-            color: var(--plum-accent); 
-            background: white; 
-            border-left: 4px solid var(--plum-accent);
-            font-weight: 600;
+            color: var(--accent-hover);
+            background-color: var(--bg);
+            border-left-color: var(--accent-olive);
         }
 
         /* Content Area */
-        .content-area { background: var(--blush-light); min-height: 100vh; padding: 40px; }
+        .content-area { 
+            background: var(--bg); 
+            min-height: 100vh; 
+            padding: 40px; 
+        }
         
         .card { 
             border: none; 
@@ -66,29 +53,16 @@
             font-size: 0.7rem; 
             padding: 5px 12px; 
             background: transparent;
-            color: var(--plum-accent) !important;
-            border: 1px solid var(--plum-accent) !important;
+            color: var(--accent-olive) !important;
+            border: 1px solid var(--accent-olive) !important;
         }
-
-        /* Elements & Buttons */
-        .btn-plum {
-            background: var(--plum-accent);
-            color: white;
-            border-radius: 0;
-            border: none;
-            padding: 8px 20px;
-        }
-
-        .btn-plum:hover {
-            background: var(--deep-plum);
-            color: white;
-        }
-        .ls-2 { letter-spacing: 2px; }
-        /* Add these extra helper classes to your <style> block */
-    .bg-plum { background-color: var(--plum-accent) !important; color: white !important; }
-    .border-plum { border: 1px solid var(--plum-accent) !important; }
-    .text-plum { color: var(--plum-accent) !important; }
-    .status-dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+    
+    .border-plum { 
+        border: 1px solid var(--accent-olive) !important; 
+    }
+    .status-dot { 
+        height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 5px;
+    }
     </style>
 </head>
 <body>
@@ -207,7 +181,7 @@
                 <small class="text-muted text-uppercase fw-bold" style="font-size:0.6rem;">Loyalty Tier</small>
                 <h6 class="text-plum mb-0 fw-bold"><i class="bi bi-gem me-1"></i>Gold Member</h6>
             </div></div>
-            <div class="px-3 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Marketplace</div>
+            <div class="px-3 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Market place</div>
             <a href="#" class="nav-link-dash active"><i class="bi bi-bag-heart me-2"></i> New Arrivals</a>
             <a href="#" class="nav-link-dash"><i class="bi bi-clock-history me-2"></i> My Orders</a>
             
@@ -219,14 +193,14 @@
                 <h2 class="fw-bold m-0" style="font-family: 'Playfair Display';">Welcome, ${user.email.split('@')[0]}</h2>
                 <div class="position-relative">
                     <button class="btn btn-plum rounded-0"><i class="bi bi-cart3 me-2"></i>Cart</button>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1</span>
                 </div>
             </div>
 
             <div class="card p-0 border-0 shadow-sm overflow-hidden mb-5">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-2 bg-plum text-white text-center py-4">
-                        <i class="bi bi-truck display-5"></i>
+                        <i class="bi bi-truck display-3"></i>
                     </div>
                     <div class="col-md-10 p-4 bg-white">
                         <div class="d-flex justify-content-between mb-2">

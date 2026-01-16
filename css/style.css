@@ -1,11 +1,11 @@
 :root {
-
-    --bg: #FAF8F3;       /* Background: Light Cream */
-    --primary-text: #3F4A3C; /* Primary Text: Olive Brown */
-    --seconadry-text: #7A8F7A;      /* Secondary Text: Sage */
-    --accent-olive: #A3B18A;   /* Accent/Buttons: Muted Olive */
-    --accent-hover: #588157;   /* Hover: Forest Green */
+    --bg: #FAF8F3;
+    --primary-text: #3F4A3C;
+    --secondary-text: #7A8F7A;
+    --accent-olive: #A3B18A;
+    --accent-hover: #588157;
     --pure-white: #ffffff;
+    --text-olive-drab: #3F4A3C;
 }
 
 body {
@@ -21,22 +21,16 @@ h1, h2, h3, h4, h5, .navbar-brand {
     color: var(--primary-text);
 }
 
-.ls-3 { 
-    letter-spacing: 3px; 
-}
-.ls-2 { 
-    letter-spacing: 2px; 
-}
-.italic { 
-    font-style: italic; 
-}
+.ls-3 { letter-spacing: 3px; }
+.ls-2 { letter-spacing: 2px; }
+.italic { font-style: italic; }
 
-/* --- 2. NAVIGATION --- */
+/* NAVIGATION */
 .navbar {
     background: var(--bg);
     transition: all 0.4s ease;
     padding: 1.2rem 0;
-    border-bottom: 1px solid rgba(163, 177, 138, 0.3); /* Subtle Muted Olive border */
+    border-bottom: 1px solid rgba(163, 177, 138, 0.3);
 }
 
 .navbar.bg-white {
@@ -49,22 +43,21 @@ h1, h2, h3, h4, h5, .navbar-brand {
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 4px;
-    color: var(--text-olive-drab) !important;
 }
 
 .nav-link {
     font-weight: 400;
-    color: var(--text-olive-drab) !important;
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 1px;
+    color: var(--primary-text) !important;
 }
 
 .nav-link:hover {
-    color: var(--accent-hover) !important; /* Forest Green on hover */
+    color: var(--accent-hover) !important;
 }
 
-/* --- 3. HERO & CAROUSEL --- */
+/* HERO */
 .hero-img {
     height: 90vh;
     object-fit: cover;
@@ -73,15 +66,10 @@ h1, h2, h3, h4, h5, .navbar-brand {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(63, 74, 60, 0.2); /* Tinted with Olive Brown */
+    background: rgba(63, 74, 60, 0.2);
 }
 
-.carousel-caption h1 {
-    color: var(--pure-white) !important;
-    text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
-}
-
-/* --- 4. BUTTONS --- */
+/* BUTTONS */
 .btn-custom {
     background: var(--accent-olive);
     color: var(--pure-white) !important;
@@ -95,23 +83,22 @@ h1, h2, h3, h4, h5, .navbar-brand {
 }
 
 .btn-custom:hover {
-    background: var(--accent-hover); /* Forest Green */
-    border-color: var(--accent-hover);
-    color: var(--pure-white) !important;
-}
-
-.btn-plum { /* Retaining class name but updating to Forest */
     background: var(--accent-hover);
-    color: white;
+    border-color: var(--accent-hover);
+}
+.btn-plum {
+    background: var(--accent-olive);
+    color: var(--pure-white);
     border-radius: 0;
+    border: none;
+    padding: 8px 20px;
 }
-
 .btn-plum:hover {
-    background: var(--text-olive-drab);
-    color: white;
+    background: var(--accent-hover);
+    color: var(--pure-white);
 }
 
-/* --- 5. INDEX PAGE COMPONENTS --- */
+/* COMPONENTS */
 .feature-card {
     border-right: 1px solid rgba(163, 177, 138, 0.2);
     transition: 0.3s;
@@ -129,17 +116,15 @@ h1, h2, h3, h4, h5, .navbar-brand {
     margin-top: 15px;
 }
 
-/* Product Cards */
 .img-container {
     position: relative;
     overflow: hidden;
-    background-color: #f0ede6; /* Slightly deeper cream for contrast */
 }
 
 .img-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(88, 129, 87, 0.3); /* Forest Green overlay */
+    background: rgba(88, 129, 87, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,73 +132,39 @@ h1, h2, h3, h4, h5, .navbar-brand {
     transition: opacity 0.3s;
 }
 
-.product-card:hover .img-overlay {
-    opacity: 1;
+.product-card:hover .img-overlay { 
+    opacity: 1; 
 }
+.form-control, .form-select {
+            border: 1px solid var(--plum-soft);
+            padding: 12px;
+            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.5);
+        }
 
-/* --- 7. SPECIAL SECTIONS --- */
+        .form-control:focus, .form-select:focus {
+            border-color: var(--plum-accent);
+            box-shadow: none;
+            background: #fff;
+        }
+
+        .input-label {
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            color: var(--plum-accent);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
 .bg-plum { 
     background-color: var(--accent-olive) !important; 
 }
-
-.bg-plum h2, .bg-plum p, .bg-plum h6 {
-    color: var(--pure-white) !important;
-}
-
 .text-plum { 
     color: var(--accent-olive) !important; 
 }
 
-/* --- 8. DASHBOARD SPECIFIC --- */
-.sidebar { 
-    background: #F1EFE9; /* Custom soft cream-grey for sidebar */
-    min-height: 100vh; 
-    border-right: 1px solid rgba(63, 74, 60, 0.1); 
-}
-
-.nav-link-dash { 
-    color: var(--text-olive-drab); 
-    padding: 12px 25px; 
-    display: block; 
-    text-decoration: none; 
-    font-size: 0.9rem; 
-    border-left: 4px solid transparent;
-}
-
-.nav-link-dash:hover, .nav-link-dash.active { 
-    color: var(--accent-hover); 
-    background: var(--pure-white); 
-    border-left: 4px solid var(--accent-hover);
-    font-weight: 600;
-}
-
-.role-badge { 
-    letter-spacing: 2px; 
-    font-size: 0.7rem; 
-    padding: 5px 12px; 
-    background: transparent;
-    color: var(--seconadry-text) !important;
-    border: 1px solid var(--seconadry-text) !important;
-}
-
-/* --- 9. FOOTER --- */
+/* FOOTER */
 footer {
-    background-color: var(--text-olive-drab) !important; /* Grounded Olive Brown */
+    background-color: var(--text-olive-drab) !important;
     color: var(--bg) !important;
-    border-top: 1px solid var(--accent-olive);
-}
-
-footer .text-plum {
-    color: var(--accent-olive) !important;
-}
-
-footer input {
-    background: var(--pure-white) !important;
-    border: 1px solid var(--seconadry-text) !important;
-    color: var(--text-olive-drab) !important;
-}
-
-footer input::placeholder {
-    color: var(--seconadry-text);
-    opacity: 0.6;
 }
