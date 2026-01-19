@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
+        .homeheader{
+            text-align: center;
+            margin-bottom: 25px;
+       }
+       .tagline{
+            font-size: 16px;
+            font-style: italic;
+            text-align: center;
+            margin-top: 6px;
+       }
         .sidebar { 
            background-color: #e5f0d5;
            min-height: 100vh;
@@ -26,6 +36,7 @@
             text-decoration: none;
             border-left: 4px solid transparent;
             transition: 0.2s;
+            cursor: pointer;
         }
 
         .nav-link-dash:hover, .nav-link-dash.active { 
@@ -34,7 +45,6 @@
             border-left-color: var(--accent-olive);
         }
 
-        /* Content Area */
         .content-area { 
             background: var(--bg); 
             min-height: 100vh; 
@@ -57,12 +67,13 @@
             border: 1px solid var(--accent-olive) !important;
         }
     
-    .border-plum { 
-        border: 1px solid var(--accent-olive) !important; 
-    }
-    .status-dot { 
+        .border-plum { 
+            border: 1px solid var(--accent-olive) !important; 
+        }
+        .status-dot { 
         height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 5px;
-    }
+       }
+       
     </style>
 </head>
 <body>
@@ -72,7 +83,7 @@
         <nav class="col-md-2 d-none d-md-block sidebar p-0">
             <div class="p-4 border-bottom border-light mb-3 text-center">
                 <h5 class="ls-2">ELEGANCE</h5>
-                <a href="profile.html" class="nav-link-dash"><i class="bi bi-person me-2"></i> My Profile</a>
+                <a href="profile.html" class="nav-link-dash p-2 small"><i class="bi bi-person me-2"></i> My Profile</a>
                 <span id="displayRole" class="badge role-badge">ROLE</span>
             </div>
             <div id="sidebarMenu">
@@ -88,318 +99,6 @@
         </main>
     </div>
 </div>
-
-<script>
-    // 1. AUTHENTICATION
-    const user = JSON.parse(localStorage.getItem('currentUser')) || { role: 'Client', email: 'guest@elegance.com' }; 
-    document.getElementById('displayRole').innerText = user.role.toUpperCase();
-
-    // 2. THEMED MODULES
-   const modules = {
-    Admin: {
-        sidebar: `
-            <div class="px-3 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Core Operations</div>
-            <a href="#" class="nav-link-dash active"><i class="bi bi-speedometer2 me-2"></i> System Health</a>
-            <a href="#" class="nav-link-dash"><i class="bi bi-shield-check me-2"></i> Permissions</a>
-            
-            <div class="px-3 mt-4 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Data Management</div>
-            <a href="#" class="nav-link-dash"><i class="bi bi-database me-2"></i> Database Backup</a>
-            <a href="#" class="nav-link-dash"><i class="bi bi-journal-text me-2"></i> Audit Logs</a>
-            <a href="#" class="nav-link-dash text-danger"><i class="bi bi-exclamation-octagon me-2"></i> Error Logs</a>`,
-        content: `
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="fw-bold m-0" style="font-family: 'Playfair Display';">System Infrastructure</h2>
-                <div class="badge bg-success-subtle text-success p-2 px-3 border border-success">Network: Optimal</div>
-            </div>
-            
-            <div class="row g-4 mb-4">
-                <div class="col-md-3">
-                    <div class="card p-3 shadow-sm border-0">
-                        <small class="text-muted text-uppercase fw-bold" style="font-size:0.65rem;">Platform Revenue</small>
-                        <h4 class="fw-bold">₹42,500</h4>
-                        <small class="text-success"><i class="bi bi-arrow-up"></i> 12% growth</small>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card p-3 shadow-sm border-0">
-                        <small class="text-muted text-uppercase fw-bold" style="font-size:0.65rem;">CPU Usage</small>
-                        <h4 class="fw-bold">24%</h4>
-                        <div class="progress" style="height: 6px;"><div class="progress-bar bg-plum" style="width: 24%"></div></div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card p-3 shadow-sm border-0">
-                        <small class="text-muted text-uppercase fw-bold" style="font-size:0.65rem;">Active Nodes</small>
-                        <h4 class="fw-bold">184</h4>
-                        <small class="text-plum">4 Admins Syncing</small>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card p-3 shadow-sm border-0 bg-plum text-white">
-                        <small class="opacity-75 text-uppercase fw-bold" style="font-size:0.65rem;">Security Status</small>
-                        <h4 class="fw-bold">Secured</h4>
-                        <small class="opacity-75">SSL Certificate: Valid</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card p-4 border-0 shadow-sm">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5 class="fw-bold m-0">Live Security Audit Log</h5>
-                    <div class="btn-group">
-                        <button class="btn btn-sm btn-outline-plum rounded-0">Export PDF</button>
-                        <button class="btn btn-sm btn-plum rounded-0">Clear Logs</button>
-                    </div>
-                </div>
-                <div class="table-responsive">
-                    <table class="table align-middle small table-hover">
-                        <thead class="table-light">
-                            <tr class="text-uppercase" style="font-size:0.7rem;">
-                                <th>Event Type</th><th>Origin</th><th>IP Address</th><th>Timestamp</th><th>Risk Level</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><i class="bi bi-shield-slash text-danger me-2"></i>Brute Force Attempt</td>
-                                <td>Frontend-Auth</td><td>192.168.1.1</td><td>14:02:11</td>
-                                <td><span class="badge bg-danger">Critical</span></td>
-                            </tr>
-                            <tr>
-                                <td><i class="bi bi-person-gear text-success me-2"></i>Role Modified</td>
-                                <td>Sarah_Admin</td><td>102.12.0.45</td><td>12:45:30</td>
-                                <td><span class="badge bg-info">Low</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>`
-    },
-
-    Client: {
-        sidebar: `
-            <div class="px-3 mb-4"><div class="p-3 rounded-0 bg-white shadow-sm border-start border-plum border-4">
-                <small class="text-muted text-uppercase fw-bold" style="font-size:0.6rem;">Loyalty Tier</small>
-                <h6 class="text-plum mb-0 fw-bold"><i class="bi bi-gem me-1"></i>Gold Member</h6>
-            </div></div>
-            <div class="px-3 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Market place</div>
-            <a href="#" class="nav-link-dash active"><i class="bi bi-bag-heart me-2"></i> New Arrivals</a>
-            <a href="#" class="nav-link-dash"><i class="bi bi-clock-history me-2"></i> My Orders</a>
-            
-            <div class="px-3 mt-4 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Settings</div>
-            <a href="#" class="nav-link-dash"><i class="bi bi-geo-alt me-2"></i> Saved Addresses</a>
-            <a href="#" class="nav-link-dash"><i class="bi bi-wallet2 me-2"></i> Payment Methods</a>`,
-        content: `
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="fw-bold m-0" style="font-family: 'Playfair Display';">Welcome, ${user.email.split('@')[0]}</h2>
-                <div class="position-relative">
-                    <button class="btn btn-plum rounded-0"><i class="bi bi-cart3 me-2"></i>Cart</button>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1</span>
-                </div>
-            </div>
-
-            <div class="card p-0 border-0 shadow-sm overflow-hidden mb-5">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-2 bg-plum text-white text-center py-4">
-                        <i class="bi bi-truck display-3"></i>
-                    </div>
-                    <div class="col-md-10 p-4 bg-white">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6 class="fw-bold m-0">Tracking Order #ELG-8821</h6>
-                            <span class="text-plum fw-bold small">65% Completed</span>
-                        </div>
-                        <div class="progress mb-2" style="height: 10px;"><div class="progress-bar bg-plum" style="width: 65%"></div></div>
-                        <div class="d-flex justify-content-between small text-muted">
-                            <span>Status: In Transit</span>
-                            <span>ETA: Tomorrow, 4:00 PM</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h5 class="fw-bold mb-4">The Designer Edit</h5>
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-hover overflow-hidden">
-                        <div class="position-relative">
-                            <img src="images/images (30).jpeg" class="card-img-top" style="height:320px; object-fit:cover;">
-                            <span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-0 px-3 py-2 shadow-sm">NEW</span>
-                        </div>
-                        <div class="card-body text-center bg-white p-4">
-                            <h6 class="fw-bold">Banarasi Silk Saree</h6>
-                            <p class="text-plum fw-bold fs-5">₹12,500</p>
-                            <button class="btn btn-plum w-100 rounded-0">Quick Purchase</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-hover overflow-hidden">
-                        <img src="images/AD804-1500x1500.jpg" class="card-img-top" style="height:320px; object-fit:cover;">
-                        <div class="card-body text-center bg-white p-4">
-                            <h6 class="fw-bold">Royal Wedding Lehanga</h6>
-                            <p class="text-plum fw-bold fs-5">₹25,000</p>
-                            <button class="btn btn-plum w-100 rounded-0">Quick Purchase</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-hover overflow-hidden">
-                        <img src="images/images (21).jpeg" class="card-img-top" style="height:320px; object-fit:cover;">
-                        <div class="card-body text-center bg-white p-4">
-                            <h6 class="fw-bold">Embroidered Ethnic Kurthi</h6>
-                            <p class="text-plum fw-bold fs-5">₹5,000</p>
-                            <button class="btn btn-plum w-100 rounded-0">Quick Purchase</button>
-                        </div>
-                    </div>
-                </div>
-            </div>`
-    },
-
-    Sales: {
-        sidebar: `
-            <div class="px-3 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Performance</div>
-            <a href="#" class="nav-link-dash active"><i class="bi bi-graph-up-arrow me-2"></i> Sales Center</a>
-            <a href="#" class="nav-link-dash"><i class="bi bi-megaphone me-2"></i> Campaigns</a>
-            
-            <div class="px-3 mt-4 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Tools</div>
-            <a href="#" class="nav-link-dash"><i class="bi bi-percent me-2"></i> Discount Codes</a>
-            <a href="#" class="nav-link-dash"><i class="bi bi-people me-2"></i> Lead Tracker</a>`,
-        content: `
-            <h2 class="fw-bold mb-4" style="font-family: 'Playfair Display';">Sales & Revenue Center</h2>
-            
-            <div class="card border-0 shadow-sm p-4 mb-4 border-start border-warning border-5">
-                <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0 bg-warning-subtle text-warning p-3 rounded">
-                        <i class="bi bi-lightning-charge-fill fs-3"></i>
-                    </div>
-                    <div class="flex-grow-1 ms-4">
-                        <h5 class="fw-bold mb-1">Inventory Critical Alert</h5>
-                        <p class="text-muted m-0">Banarasi Silk Saree is below the 5-unit threshold. <a href="#" class="text-plum fw-bold">Restock Order</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-8">
-                    <div class="card border-0 shadow-sm p-4 h-100">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h6 class="fw-bold m-0 text-uppercase ls-1" style="font-size:0.8rem;">Weekly Revenue Forecast</h6>
-                            <span class="badge bg-plum">Target: ₹5L</span>
-                        </div>
-                        <div style="height: 220px; background: #fafafa; border-radius:15px;" class="d-flex align-items-end justify-content-around p-3 border">
-                            <div class="bg-plum opacity-50" style="height: 40%; width: 50px; border-radius: 8px 8px 0 0;" title="Mon"></div>
-                            <div class="bg-plum" style="height: 70%; width: 50px; border-radius: 8px 8px 0 0;" title="Tue"></div>
-                            <div class="bg-plum opacity-50" style="height: 55%; width: 50px; border-radius: 8px 8px 0 0;" title="Wed"></div>
-                            <div class="bg-plum" style="height: 90%; width: 50px; border-radius: 8px 8px 0 0;" title="Thu"></div>
-                            <div class="bg-plum opacity-50" style="height: 65%; width: 50px; border-radius: 8px 8px 0 0;" title="Fri"></div>
-                        </div>
-                        <div class="d-flex justify-content-around mt-3 fw-bold text-muted small">
-                            <span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm p-4 h-100">
-                        <h6 class="fw-bold mb-4 text-uppercase ls-1" style="font-size:0.8rem;">Campaign Launchpad</h6>
-                        <form>
-                            <div class="mb-3">
-                                <label class="small fw-bold text-muted">TARGET CATEGORY</label>
-                                <select class="form-select rounded-0 border-plum-soft"><option>All Bridal Wear</option><option>Evening Gowns</option></select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="small fw-bold text-muted">DISCOUNT PERCENTAGE</label>
-                                <div class="input-group">
-                                    <input type="number" class="form-control rounded-0" placeholder="10">
-                                    <span class="input-group-text bg-plum text-white border-0">%</span>
-                                </div>
-                            </div>
-                            <div class="mb-4">
-                                <label class="small fw-bold text-muted">CAMPAIGN NAME</label>
-                                <input type="text" class="form-control rounded-0" placeholder="Winter Sale 2026">
-                            </div>
-                            <button type="button" class="btn btn-plum w-100 rounded-0 py-2 fw-bold">PUSH LIVE</button>
-                        </form>
-                    </div>
-                </div>
-            </div>`
-    },
-
-    Delivery: {
-        sidebar: `
-            <div class="px-3 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Field Duty</div>
-            <a href="#" class="nav-link-dash active"><i class="bi bi-bicycle me-2"></i> Current Route</a>
-            <a href="#" class="nav-link-dash"><i class="bi bi-clipboard-check me-2"></i> Task History</a>
-            
-            <div class="px-3 mt-4 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Incentives</div>
-            <a href="#" class="nav-link-dash"><i class="bi bi-star me-2"></i> Performance Rating</a>
-            <a href="#" class="nav-link-dash"><i class="bi bi-wallet2 me-2"></i> Earnings Detail</a>`,
-        content: `
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="fw-bold m-0" style="font-family: 'Playfair Display';">Logistics Terminal</h2>
-                <div class="p-2 px-3 bg-white border shadow-sm">
-                    <span class="text-muted small fw-bold">ID: DR-99201</span>
-                </div>
-            </div>
-
-            <div class="card p-3 mb-4 bg-plum text-white border-0 shadow-sm">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h6 class="fw-bold mb-1">Availability Switch</h6>
-                        <p class="small mb-0 opacity-75">Switch offline to stop receiving new orders</p>
-                    </div>
-                    <div class="col-auto">
-                        <div class="form-check form-switch custom-switch">
-                            <input class="form-check-input bg-success" type="checkbox" checked id="dutySwitch">
-                            <label class="form-check-label fw-bold" for="dutySwitch">ACTIVE</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h5 class="fw-bold mb-3 d-flex align-items-center">
-                <i class="bi bi-pin-map text-plum me-2"></i>Active Assignments
-            </h5>
-            
-            <div class="card border-0 shadow-sm overflow-hidden mb-3">
-                <div class="p-4 border-bottom d-flex justify-content-between align-items-start">
-                    <div>
-                        <span class="badge bg-warning text-dark mb-2 px-3 py-2">PRIORITY PICKUP</span>
-                        <h5 class="fw-bold mb-1">Palakkad District, Kerala</h5>
-                        <p class="text-muted small m-0"><i class="bi bi-geo-alt-fill me-1"></i>Warehouse Hub: Cochin East</p>
-                    </div>
-                    <button class="btn btn-plum rounded-0 px-4 py-2">START NAVIGATION</button>
-                </div>
-                <div class="p-4 bg-light bg-opacity-50">
-                    <div class="row text-center">
-                        <div class="col-md-4 border-end">
-                            <small class="text-muted d-block mb-1">CUSTOMER</small>
-                            <span class="fw-bold">Shruthi Nair</span>
-                        </div>
-                        <div class="col-md-4 border-end">
-                            <small class="text-muted d-block mb-1">CONTACT</small>
-                            <span class="fw-bold">+91 987-654-3210</span>
-                        </div>
-                        <div class="col-md-4">
-                            <small class="text-muted d-block mb-1">OTP REQUIRED</small>
-                            <span class="badge bg-dark">YES</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-3 text-center bg-white border-top">
-                    <a href="#" class="text-plum small text-decoration-none fw-bold">VIEW ORDER MANIFEST (4 Items)</a>
-                </div>
-            </div>`
-    }
-};
-    // 3. RENDER
-    const roleData = modules[user.role] || modules.Client;
-    document.getElementById('sidebarMenu').innerHTML = roleData.sidebar;
-    document.getElementById('dashboardContent').innerHTML = roleData.content;
-
-    // 4. LOGOUT
-    function logout() {
-        localStorage.removeItem('currentUser');
-        window.location.href = 'login.html';
-    }
-</script>
+<script src="js/dashboard.js"></script>
 </body>
 </html>

@@ -98,6 +98,80 @@ h1, h2, h3, h4, h5, .navbar-brand {
     color: var(--pure-white);
 }
 
+/* Professional Zoom & Grey Hover Effect */
+#dashboardContent tbody tr {
+    position: relative;
+    z-index: 1;
+}
+
+#dashboardContent tbody tr:hover {
+    /* Light Grey Background */
+    background-color: #adadad !important; 
+    transition: transform 0.3s, background-color 0.3s ease;
+    transform: scale(1.01) ease; 
+    z-index: 5;
+    border-radius: 4px;
+    box-shadow: 4px 10px 15px rgba(0,0,0,0.05);
+}
+/* ORDER TRACKING TIMELINE */
+.order-timeline {
+  list-style: none !important;
+  padding-left: 0;
+  margin-left: 20px;
+  position: relative;
+}
+
+.order-timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #dee2e6;
+}
+
+.order-timeline li {
+  position: relative !important;
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+.order-timeline li .dot {
+  position: absolute !important;
+  left: 0;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #adb5bd; /* default */
+  z-index: 2;
+}
+
+/* COMPLETED STEP */
+.order-timeline li.completed .dot {
+  background-color: #198754 !important; /* green */
+}
+
+/* CURRENT STEP */
+.order-timeline li.current .dot {
+  background-color: #0d6efd !important; /* blue */
+}
+
+/* TEXT */
+.order-timeline li h6 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.order-timeline li small {
+  color: #6c757d;
+}
+
+#dashboardContent td {
+    border: 5px solid transparent;
+}
 /* COMPONENTS */
 .feature-card {
     border-right: 1px solid rgba(163, 177, 138, 0.2);
@@ -162,9 +236,178 @@ h1, h2, h3, h4, h5, .navbar-brand {
 .text-plum { 
     color: var(--accent-olive) !important; 
 }
+/* Coupon Hover Effect */
+/* --- ANIMATIONS & TRANSITIONS --- */
+.animate-fade-in {
+    animation: slideUpFade 0.6s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+}
 
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- PRODUCT & OFFER INTERACTION --- */
+.product-container { overflow: hidden; position: relative; }
+
+.product-container img {
+    transition: transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Unique Hover: Image Zoom */
+.card:hover .product-container img, 
+.offer-banner:hover img, 
+.hero-banner:hover img {
+    transform: scale(1.08);
+}
+
+/* --- COUPON SPECIFIC --- */
+.coupon-card {
+    transition: transform 0.3s ease;
+    border-left: 5px solid var(--accent-olive) !important;
+}
+
+.coupon-card:hover {
+    transform: translateX(8px); /* Professional shift instead of zoom */
+}
+
+/* --- REMOVE BUTTON ANIMATION --- */
+.remove-btn {
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.remove-btn:hover {
+    background-color: #dc3545 !important;
+    color: white !important;
+    transform: rotate(90deg);
+}
+
+/* --- BANNER OVERLAYS --- */
+.banner-overlay {
+    background: linear-gradient(to right, rgba(75, 54, 72, 0.85), transparent);
+    transition: background 0.5s ease;
+}
+
+.offer-banner:hover .banner-overlay {
+    background: linear-gradient(to right, rgba(75, 54, 72, 0.95), transparent);
+}
 /* FOOTER */
 footer {
     background-color: var(--text-olive-drab) !important;
     color: var(--bg) !important;
+}
+.hero-banner img {
+    transition: transform 3s ease;
+}
+
+.hero-banner:hover img {
+    transform: scale(1.1); /* Slow cinematic zoom */
+}
+/* Staggered Entrance Animation for Addresses */
+.address-item {
+    animation: addressSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.address-item:nth-child(1) { animation-delay: 0.1s; }
+.address-item:nth-child(2) { animation-delay: 0.2s; }
+
+@keyframes addressSlideUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Interaction */
+.address-item .card {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid transparent !important;
+}
+
+.address-item .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+    border-color: #eee !important;
+}
+
+/* Special hover for non-default cards */
+.hover-border-plum:hover {
+    border-bottom: 3px solid var(--plum) !important;
+}
+/* Staggered Entrance for Payment Items */
+.payment-item {
+    animation: paymentSlideUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.payment-item:nth-child(1) { animation-delay: 0.1s; }
+.payment-item:nth-child(2) { animation-delay: 0.2s; }
+.payment-item:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes paymentSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Hover Interaction */
+.payment-item .card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.payment-item .card:hover {
+    transform: translateY(-10px) rotateX(2deg);
+    box-shadow: 0 15px 30px rgba(75, 54, 72, 0.15) !important;
+}
+
+/* Credit Card Icons */
+.bi-chip {
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.5));
+}
+/* Notification Item Styles */
+.notif-item {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+.notif-item:hover {
+    background-color: #fcfcfc !important; /* The Light Grey Hover you requested */
+    transform: scale(1.005); /* Very subtle zoom */
+}
+
+.notif-item.unread {
+    background-color: #fcfdfa; /* Very faint olive tint */
+}
+
+/* Icon Circles */
+.notif-icon-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+
+.bg-olive-light { background-color: rgba(107, 142, 35, 0.1); }
+.bg-plum-light { background-color: rgba(75, 54, 72, 0.08); }
+
+/* Unread Indicator */
+.unread-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-olive);
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Timeline Animation */
+.notification-container {
+    animation: slideUpFade 0.6s ease-out;
 }
