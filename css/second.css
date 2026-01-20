@@ -1,0 +1,53 @@
+:root {
+    --bg: #FAF8F3;
+    --primary-text: #3F4A3C;
+    --secondary-text: #7A8F7A;
+    --accent-olive: #A3B18A;
+    --accent-hover: #588157;
+    --pure-white: #ffffff;
+    --text-olive-drab: #3F4A3C;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text);
+    background-color: var(--bg);
+    line-height: 1.6;
+    overflow-x: hidden; 
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-text);
+}
+
+.ls-3 { letter-spacing: 3px; }
+.ls-2 { letter-spacing: 2px; }
+.italic { font-style: italic; }
+/* Admin Sidebar Custom Styling */
+
+
+.dropdown-toggle-custom::after {
+    display: inline-block;
+    margin-left: auto;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    margin-top: 10px;
+}
+
+/* Ensure child links look distinct */
+.nav-link-dash.small {
+    font-size: 0.85rem !important;
+    padding: 8px 20px !important;
+    opacity: 0.8;
+}
+
+.nav-link-dash.small:hover {
+    opacity: 1;
+    background-color: var(--accent-olive) !important;
+    color: white !important;
+}

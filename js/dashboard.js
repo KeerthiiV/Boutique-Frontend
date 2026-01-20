@@ -823,29 +823,146 @@ notification:`
     </div> `,
 
         // --- ADMIN PAGES ---
-        adminhome: `
-        <h2 class="fw-bold mb-4" style="font-family: 'Playfair Display';">System Health</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="card p-3 border-0">
-                        <small class="text-muted text-uppercase fw-bold" style="font-size:0.65rem;">CPU Usage</small>
-                        <h4 class="fw-bold">24%</h4>
-                        <div class="progress" style="height: 6px;"><div class="progress-bar bg-plum" style="width: 24%"></div></div>
+    adminhome: `
+    <div class="container-fluid animate-fade-in p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h2 class="fw-bold mb-1" style="font-family: 'Playfair Display';">Executive Overview</h2>
+                <p class="text-muted small">Real-time data for Elegance Boutique</p>
+            </div>
+            <button class="btn btn-plum shadow-sm" onclick="window.print()">
+                <i class="bi bi-download me-2"></i>Export Report
+            </button>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm p-3 h-100 border-start border-plum border-4">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <p class="text-muted small mb-1 fw-bold">TOTAL REVENUE</p>
+                            <h3 class="fw-bold">₹4,25,890</h3>
+                            <span class="text-success small"><i class="bi bi-arrow-up"></i> +12.5%</span>
+                        </div>
+                        <div class="text-plum fs-3"><i class="bi bi-currency-rupee"></i></div>
                     </div>
                 </div>
-            </div>`
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm p-3 h-100 border-start border-success border-4">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <p class="text-muted small mb-1 fw-bold">ACTIVE ORDERS</p>
+                            <h3 class="fw-bold">156</h3>
+                            <span class="text-muted small">8 pending shipping</span>
+                        </div>
+                        <div class="text-success fs-3"><i class="bi bi-bag-check"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm p-3 h-100 border-start border-warning border-4">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <p class="text-muted small mb-1 fw-bold">NEW CUSTOMERS</p>
+                            <h3 class="fw-bold">1,204</h3>
+                            <span class="text-success small"><i class="bi bi-arrow-up"></i> +5%</span>
+                        </div>
+                        <div class="text-warning fs-3"><i class="bi bi-people"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm p-3 h-100 border-start border-danger border-4">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <p class="text-muted small mb-1 fw-bold">LOW STOCK ITEMS</p>
+                            <h3 class="fw-bold">12</h3>
+                            <span class="text-danger small">Requires attention</span>
+                        </div>
+                        <div class="text-danger fs-3"><i class="bi bi-exclamation-triangle"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm p-4 h-100">
+                    <h5 class="fw-bold mb-4">Sales Performance (Weekly)</h5>
+                    <canvas id="salesChart" style="max-height: 300px;"></canvas>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm p-4 h-100">
+                    <h5 class="fw-bold mb-4">Recent Transactions</h5>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item px-0 border-0 mb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Silk Saree - Crimson</h6>
+                                    <small class="text-muted">Order #8821 • 2 mins ago</small>
+                                </div>
+                                <span class="badge bg-success-subtle text-success">₹12,500</span>
+                            </div>
+                        </div>
+                        <div class="list-group-item px-0 border-0 mb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Designer Kurta</h6>
+                                    <small class="text-muted">Order #8820 • 15 mins ago</small>
+                                </div>
+                                <span class="badge bg-success-subtle text-success">₹4,200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-plum btn-sm mt-auto" onclick="loadContent('allOrders')">View All Orders</button>
+                </div>
+            </div>
+        </div>
+    </div>`,
     };
 
     // 3. SIDEBAR MODULES
     const sidebarConfigs = {
+    
     Admin: `
-        <div class="px-3 mb-3 small text-uppercase fw-bold opacity-50">Admin Panel</div>
-        <a onclick="loadContent('adminhome', this)" class="nav-link-dash active"><i class="bi bi-speedometer2 me-2"></i> Dashboard</a>
-        <a onclick="loadContent('adminproducts', this)" class="nav-link-dash"><i class="bi bi-bag me-2"></i>Products </a>
-        <a onclick="loadContent('adminorders', this)" class="nav-link-dash"><i class="bi bi-cart-check me-2"></i>Orders</a>
-        <a onclick="loadContent('adminusers', this)" class="nav-link-dash"><i class="bi bi-people me-2"></i> Users</a>
-        <a onclick="loadContent('adminreports', this)" class="nav-link-dash"><i class="bi bi-bar-chart me-2"></i>Reports</a>
-        <a onclick="loadContent('adminsettings', this)" class="nav-link-dash"><i class="bi bi-gear me-2"></i>Settings</a>`,
+    <div class="d-flex flex-column p-3 sidebar-admin-custom" style="min-height: 100vh;">
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link-dash active mb-1" onclick="loadContent('adminhome', this)"><i class="bi bi-house me-2"></i>Home</a>
+            </li>
+            <li>
+                <a class="nav-link-dash dropdown-toggle-custom mb-1" data-bs-toggle="collapse" href="#userMgmt"><i class="bi bi-people me-2"></i> User Management</a>
+                <div class="collapse ps-3" id="userMgmt">
+                    <a href="#" class="nav-link-dash small" onclick="loadContent('customers', this)">Customers</a>
+                    <a href="#" class="nav-link-dash small" onclick="loadContent('salesStaff', this)">Sales Staff</a>
+                    <a href="#" class="nav-link-dash small" onclick="loadContent('deliveryStaff', this)">Delivery Staff</a>
+                </div>
+            </li>
+            <li>
+                <a class="nav-link-dash dropdown-toggle-custom mb-1" data-bs-toggle="collapse" href="#productMgmt"><i class="bi bi-box-seam me-2"></i> Products</a>
+                <div class="collapse ps-3" id="productMgmt">
+                    <a href="#" class="nav-link-dash small" onclick="loadContent('addProduct', this)">Add Product</a>
+                    <a href="#" class="nav-link-dash small" onclick="loadContent('viewProducts', this)">View Products</a>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link-dash dropdown-toggle-custom mb-1" data-bs-toggle="collapse" href="#orderMgmt"><i class="bi bi-receipt me-2"></i> Orders</a>
+                <div class="collapse ps-3" id="orderMgmt">
+                    <a href="#" class="nav-link-dash small" onclick="loadContent('allOrders', this)">All Orders</a>
+                    <a href="#" class="nav-link-dash small" onclick="loadContent('pendingOrders', this)">Pending</a>
+                </div>
+            </li>
+            <li>
+                <a class="nav-link-dash dropdown-toggle-custom mb-1" data-bs-toggle="collapse" href="#reports"><i class="bi bi-bar-chart-line me-2"></i> Analytics</a>
+                <div class="collapse ps-3" id="reports">
+                    <a href="#" class="nav-link-dash small" onclick="loadContent('salesReport', this)">Sales Report</a>
+                </div>
+            </li>
+        </ul>
+    </div>`,
+    
     Client: `
             <div class="px-3 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Market place</div>
             <a onclick="loadContent('home', this)" class="nav-link-dash"><i class="bi bi-house me-2"></i> Home</a>
