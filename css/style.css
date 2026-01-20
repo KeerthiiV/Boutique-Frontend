@@ -1,3 +1,4 @@
+
 :root {
     --bg: #FAF8F3;
     --primary-text: #3F4A3C;
@@ -410,4 +411,213 @@ footer {
 /* Timeline Animation */
 .notification-container {
     animation: slideUpFade 0.6s ease-out;
+}
+/* ===== WELCOME HEADER ===== */
+.home.header h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #4b3648; /* Elegant plum color */
+}
+
+.home.header p {
+    font-size: 0.95rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* ===== LATEST ORDER STATUS ===== */
+.card .badge {
+    font-size: 0.85rem;
+    padding: 0.35em 0.65em;
+}
+
+/* ===== SHOP BY CATEGORY ===== */
+.row.text-center .col-3 img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #f1f1f1;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.row.text-center .col-3 img:hover {
+    transform: scale(1.1);
+    border-color: #6b8e23; /* Olive border on hover */
+}
+
+/* ===== FLASH SALE ===== */
+.alert.alert-danger {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* ===== TRENDING PRODUCTS ===== */
+.card.h-100 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.h-100:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card-body p.fw-semibold {
+    color: #4b3648;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* ===== DISCOUNT BANNER ===== */
+.card.bg-dark {
+    border-radius: 8px;
+}
+
+/* ===== HELP & SUPPORT ===== */
+.card.shadow-sm.text-center button {
+    transition: all 0.3s ease;
+}
+
+.card.shadow-sm.text-center button:hover {
+    background-color: #4b3648;
+    color: #fff;
+    border-color: #4b3648;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+    .row.text-center .col-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .home.header h2 {
+        font-size: 1.5rem;
+    }
+}
+/* Floating Animation for the Concierge Card */
+.concierge-card-float {
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Pulse for the "Online" status dot */
+.pulse-online {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
+
+
+/* Luxury Countdown Styling */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.countdown-box {
+    background: rgba(255, 255, 255, 0.15); /* Glassmorphism */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 18px;
+    border-radius: 8px;
+    min-width: 80px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-box span {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.countdown-box .label {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 5px;
+}
+
+/* Subtle pulse for the "Live" effect */
+#seconds {
+    color: #ffd700; /* Gold color for ticking seconds */
+}
+/* Center all content in the product card */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem !important;
+}
+
+/* Fix the button alignment at the bottom */
+.product-actions-container {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    margin-top: auto; /* Pushes buttons to the bottom if cards vary in height */
+}
+
+/* Style for the Quick Purchase button */
+.btn-quick-purchase {
+    flex-grow: 1;
+    background-color: #a3b18a; /* Your Olive color from screenshots */
+    color: white;
+    border: none;
+    padding: 8px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-quick-purchase:hover {
+    background-color: #588157;
+    color: white;
+}
+
+/* Style for the Wishlist heart button */
+.btn-wishlist-outline {
+    width: 40px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dee2e6;
+    background: transparent;
+    color: #666;
+    transition: 0.3s;
+}
+
+.btn-wishlist-outline:hover {
+    color: #dc3545;
+    border-color: #dc3545;
+    background-color: #fff5f5;
 }

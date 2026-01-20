@@ -1,21 +1,21 @@
-const user = JSON.parse(localStorage.getItem('currentUser')) || { role: 'Client', email: 'guest@elegance.com' }; 
-document.getElementById('displayRole').innerText = user.role.toUpperCase();
+const user = JSON.parse(localStorage.getItem('currentUser'));
+if (!user) {
+    window.location.href = 'login.html';
+}
 
     // 2. LANDING PAGES CONTENT (The "Inner Pages")
   const pages = {
         // --- CLIENT PAGES ---
-        home:`<div class="d-flex justify-content-between align-items-center mb-4">
-                <div class="home header">
-                    <h2 class="fw-bold m-0" style="font-family: 'Playfair Display';">Welcome, ${user.email.split('@')[0]} </h2>
-                    <p class="tagline">Where Elegance meets everyday style</p>
-                </div>
+        home:`
+                <div class="container-fluid px-4">
+     <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold m-0" style="font-family: 'Playfair Display';">Welcome, ${user.email.split('@')[0]}</h2>
                 <div class="position-relative">
-                    <button class="btn btn-plum rounded-0"><i class="bi bi-cart3 me-2"></i>Cart</button>
+                    <button class="btn btn-plum"><i class="bi bi-cart3 me-2"></i>Cart</button>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1</span>
                 </div>
             </div>
-
-            <div class="card p-0 border-0 shadow-sm overflow-hidden mb-5">
+    <div class="card p-0 border-0 shadow-sm overflow-hidden mb-5">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-2 bg-plum text-white text-center py-4">
                         <i class="bi bi-truck display-3"></i>
@@ -34,42 +34,195 @@ document.getElementById('displayRole').innerText = user.role.toUpperCase();
                 </div>
             </div>
 
-            <h5 class="fw-bold mb-4">The Designer Edit</h5>
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-hover overflow-hidden">
-                        <div class="position-relative">
-                            <img src="images/images (30).jpeg" class="card-img-top" style="height:320px; object-fit:cover;">
-                            <span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-0 px-3 py-2 shadow-sm">NEW</span>
+    
+
+    <!-- Shop by Category -->
+    <div class="row mb-5 text-center">
+        <h5 class="fw-semibold mb-3">Shop by Category</h5>
+        <div class="col-3">
+            <img src="images/images (23).jpeg" class="rounded-circle mb-2" alt="Saree">
+            <p class="small">Sarees</p>
+        </div>
+        <div class="col-3">
+            <img src="images/images (23).jpeg" class="rounded-circle mb-2" alt="Party Wear">
+            <p class="small">Party Wear</p>
+        </div>
+        <div class="col-3">
+            <img src="images/images (23).jpeg" class="rounded-circle mb-2" alt="Daily Wear">
+            <p class="small">Daily Wear</p>
+        </div>
+        <div class="col-3">
+            <img src="images/images (23).jpeg" class="rounded-circle mb-2" alt="Wedding">
+            <p class="small">Wedding</p>
+        </div>
+    </div>
+
+    <!-- Flash Sale -->
+    <div class="row mb-5">
+    <div class="col-12 px-0">
+        <div class="position-relative d-flex align-items-center justify-content-center text-center overflow-hidden shadow-lg" 
+             style="min-height: 450px; background-color: var(--plum); border-radius: 8px;">
+            
+            <img src="https://images.unsplash.com/photo-1610030469668-935142b96fe4?auto=format&fit=crop&w=1600&q=80" 
+                 alt="Designer Couture" 
+                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55;">
+
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(75, 54, 72, 0.75), rgba(0,0,0,0.4));"></div>
+
+            <div class="position-relative z-1 px-4 text-white">
+                <span class="badge rounded-pill mb-3 px-4 py-2" 
+                      style="background-color: var(--accent-olive); letter-spacing: 3px; font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.3);">
+                      LIMITED TIME OFFER
+                </span>
+                
+                <h1 class="display-3 fw-bold mb-3" style="font-family: 'Playfair Display'; letter-spacing: 4px;">
+                    ⚡ FLASH SALE
+                </h1>
+                
+                <div class="d-flex justify-content-center gap-3 mb-4 mt-2">
+                    <div class="countdown-card">
+                        <span id="hours" class="fs-2 fw-bold d-block">23</span>
+                        <small class="text-uppercase" style="font-size: 0.6rem; letter-spacing: 1px;">Hours</small>
+                    </div>
+                    <div class="countdown-card">
+                        <span id="minutes" class="fs-2 fw-bold d-block">59</span>
+                        <small class="text-uppercase" style="font-size: 0.6rem; letter-spacing: 1px;">Mins</small>
+                    </div>
+                    <div class="countdown-card">
+                        <span id="seconds" class="fs-2 fw-bold d-block">59</span>
+                        <small class="text-uppercase" style="font-size: 0.6rem; letter-spacing: 1px;">Secs</small>
+                    </div>
+                </div>
+
+                <p class="fs-5 mb-4 text-uppercase fw-light" style="letter-spacing: 4px;">
+                    Flat <span class="fw-bold" style="color: #ffd700;">30% OFF</span> on Wedding Collection
+                </p>
+                
+                <div class="d-flex gap-3 justify-content-center">
+                    <button class="btn btn-light px-5 py-2 rounded-0 fw-bold text-plum shadow-sm">
+                        SHOP COLLECTION
+                    </button>
+                    <button class="btn btn-outline-light px-4 py-2 rounded-0 fw-bold">
+                        CODE: STYLE30
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Trending Products -->
+    <div class="row mb-5">
+        <h5 class="fw-semibold mb-3">Trend Setters 🔥</h5>
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=500&q=80" class="card-img-top" style="height:450px;">
+                <div class="card-body">
+                    <h6 class="card-title">Designer Saree</h6>
+                    <p class="small text-muted">⭐ 4.8 (320 reviews)</p>
+                    <p class="fw-semibold">₹2,999</p>
+                   <div class="product-actions-container">
+                    <button class="btn btn-quick-purchase">Quick Purchase</button>
+                    <button class="btn btn-wishlist-outline">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=500&q=80" class="card-img-top" style="height:450px;">
+                <div class="card-body">
+                    <h6 class="card-title">Party Wear Gown</h6>
+                    <p class="small text-muted">⭐ 4.6 (210 reviews)</p>
+                    <p class="fw-semibold">₹4,499</p>
+                    <div class="product-actions-container">
+                    <button class="btn btn-quick-purchase">Quick Purchase</button>
+                    <button class="btn btn-wishlist-outline">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=500&q=80" class="card-img-top" style="height:450px;">
+                <div class="card-body">
+                    <h6 class="card-title">Wedding Lehenga</h6>
+                    <p class="small text-muted">⭐ 4.9 (500+ reviews)</p>
+                    <p class="fw-semibold">₹8,999</p>
+                    <div class="product-actions-container">
+                    <button class="btn btn-quick-purchase">Quick Purchase</button>
+                    <button class="btn btn-wishlist-outline">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="row g-4 mb-5 pb-5">
+    
+    <div class="col-12 px-3">
+        <div class="card border-0 overflow-hidden shadow-lg offer-banner-animated" 
+             style="border-radius: 12px; transition: transform 0.4s ease;">
+            <div class="row g-0">
+                <div class="col-md-3 d-none d-md-flex align-items-center justify-content-center position-relative" 
+                     style="background: var(--plum); overflow: hidden;">
+                    <i class="bi bi-stars text-white fs-1 opacity-25 floating-icon"></i>
+                    <div class="shimmer-effect"></div>
+                </div>
+                
+                <div class="col-md-9">
+                    <div class="card-body p-4 text-center text-md-start d-flex flex-column flex-md-row align-items-center justify-content-between" 
+                         style="background: linear-gradient(90deg, var(--accent-olive) 0%, #80a035 100%); color: white;">
+                        <div class="animate-text">
+                            <h4 class="fw-bold mb-1" style="font-family: 'Playfair Display'; letter-spacing: 1px;">✨ Festive Luxe Edit</h4>
+                            <p class="mb-0 small opacity-90">Unlock an extra 25% off your next purchase.</p>
                         </div>
-                        <div class="card-body text-center bg-white p-4">
-                            <h6 class="fw-bold">Banarasi Silk Saree</h6>
-                            <p class="text-plum fw-bold fs-5">₹12,500</p>
-                            <button class="btn btn-plum w-100 rounded-0">Quick Purchase</button>
+                        <div class="mt-3 mt-md-0">
+                            <div class="coupon-tag shadow-sm">
+                                <span class="small opacity-75 me-1">CODE:</span> 
+                                <span class="fw-bold" style="color: var(--plum);">STYLE25</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-hover overflow-hidden">
-                        <img src="images/AD804-1500x1500.jpg" class="card-img-top" style="height:320px; object-fit:cover;">
-                        <div class="card-body text-center bg-white p-4">
-                            <h6 class="fw-bold">Royal Wedding Lehanga</h6>
-                            <p class="text-plum fw-bold fs-5">₹25,000</p>
-                            <button class="btn btn-plum w-100 rounded-0">Quick Purchase</button>
-                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-7 mx-auto mt-5">
+        <div class="card border-0 shadow-lg concierge-card-float p-2" 
+             style="border-radius: 25px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.4);">
+            <div class="card-body text-center py-4">
+                <div class="position-relative mx-auto mb-4" style="width: 80px; height: 80px;">
+                    <div class="bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center w-100 h-100 border">
+                        <i class="bi bi-chat-heart fs-2" style="color: var(--plum);"></i>
                     </div>
+                    <span class="position-absolute top-0 end-0 translate-middle p-2 bg-success border border-light rounded-circle pulse-online"></span>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-hover overflow-hidden">
-                        <img src="images/images (21).jpeg" class="card-img-top" style="height:320px; object-fit:cover;">
-                        <div class="card-body text-center bg-white p-4">
-                            <h6 class="fw-bold">Embroidered Ethnic Kurthi</h6>
-                            <p class="text-plum fw-bold fs-5">₹5,000</p>
-                            <button class="btn btn-plum w-100 rounded-0">Quick Purchase</button>
-                        </div>
-                    </div>
+                
+                <h5 class="fw-bold text-plum mb-2" style="font-family: 'Playfair Display';">Boutique Concierge</h5>
+                <p class="text-muted small px-lg-5 mb-4">
+                    Our master stylists are currently online and ready to help you find the perfect fit.
+                </p>
+                
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <button class="btn btn-plum rounded-pill px-4 py-2 shadow transition-button">
+                        <i class="bi bi-whatsapp me-2"></i> START CHATTING
+                    </button>
+                    <button class="btn btn-outline-olive rounded-pill px-4 py-2">
+                        EMAIL US
+                    </button>
                 </div>
-            </div>`,
+            </div>
+        </div>
+    </div>
+</div>`,
         newarrivals: `
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="fw-bold m-0" style="font-family: 'Playfair Display';">New Arrivals</h2>
@@ -136,7 +289,7 @@ document.getElementById('displayRole').innerText = user.role.toUpperCase();
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-hover overflow-hidden">
                         <div class="position-relative">
-                            <img src="images/image (23).jpeg" class="card-img-top" style="height:320px; object-fit:cover;">
+                            <img src="images/images (23).jpeg" class="card-img-top" style="height:320px; object-fit:cover;">
                             <span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-0 px-3 py-2 shadow-sm">NEW</span>
                         </div>
                         <div class="card-body text-center bg-white p-4">
@@ -782,12 +935,15 @@ notification:`
 
     // 3. SIDEBAR MODULES
     const sidebarConfigs = {
-        Admin: `
-            <div class="px-3 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Operations</div>
-            <a onclick="loadContent('adminhealth', this)" class="nav-link-dash active"><i class="bi bi-speedometer2 me-2"></i> System Health</a>
-            <a onclick="loadContent('audit', this)" class="nav-link-dash"><i class="bi bi-journal-text me-2"></i> Audit Logs</a>`,
-        
-        Client: `
+    Admin: `
+        <div class="px-3 mb-3 small text-uppercase fw-bold opacity-50">Admin Panel</div>
+        <a onclick="loadContent('adminhome', this)" class="nav-link-dash active"><i class="bi bi-speedometer2 me-2"></i> Dashboard</a>
+        <a onclick="loadContent('adminproducts', this)" class="nav-link-dash"><i class="bi bi-bag me-2"></i>Products </a>
+        <a onclick="loadContent('adminorders', this)" class="nav-link-dash"><i class="bi bi-cart-check me-2"></i>Orders</a>
+        <a onclick="loadContent('adminusers', this)" class="nav-link-dash"><i class="bi bi-people me-2"></i> Users</a>
+        <a onclick="loadContent('adminreports', this)" class="nav-link-dash"><i class="bi bi-bar-chart me-2"></i>Reports</a>
+        <a onclick="loadContent('adminsettings', this)" class="nav-link-dash"><i class="bi bi-gear me-2"></i>Settings</a>`,
+    Client: `
             <div class="px-3 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Market place</div>
             <a onclick="loadContent('home', this)" class="nav-link-dash"><i class="bi bi-house me-2"></i> Home</a>
             <a onclick="loadContent('newarrivals', this)" class="nav-link-dash active"><i class="bi bi-bag-heart me-2"></i> New Arrivals</a>
@@ -813,6 +969,9 @@ notification:`
         } else {
             contentArea.innerHTML = `<h2 class="fw-bold">${pageKey.toUpperCase()}</h2><p>This module is coming soon.</p>`;
         }
+        if (pageKey === 'home') {
+        startCountdown();
+    }
 
         // 2. Manage Active State for sidebar links
         document.querySelectorAll('.nav-link-dash').forEach(link => link.classList.remove('active'));
@@ -821,27 +980,50 @@ notification:`
         }
     }
 
-    // 5. INITIALIZE
-    function init() {
-        const role = user.role || 'Client';
-        document.getElementById('sidebarMenu').innerHTML = sidebarConfigs[role] || sidebarConfigs.Client;
+function init() {
+    const role = user.role || 'Client';
+    document.getElementById('sidebarMenu').innerHTML = sidebarConfigs[role] || sidebarConfigs.Client;
+
+    if (role === 'Admin') loadContent('adminhome');
+    else if (role === 'Sales') loadContent('saleshome');
+    else if (role === 'Delivery') loadContent('deliveryhome');
+    else loadContent('home');
+}
+function startCountdown() {
+    let totalSeconds = 24 * 60 * 60; // 24 hours
+    
+    // Clear any existing interval to prevent multiple timers running at once
+    if (window.timerInterval) clearInterval(window.timerInterval);
+
+    window.timerInterval = setInterval(() => {
+        const h = Math.floor(totalSeconds / 3600);
+        const m = Math.floor((totalSeconds % 3600) / 60);
+        const s = totalSeconds % 60;
+
+        const hEl = document.getElementById("hours");
+        const mEl = document.getElementById("minutes");
+        const sEl = document.getElementById("seconds");
+
+        if(hEl && mEl && sEl) {
+            hEl.innerText = h.toString().padStart(2, '0');
+            mEl.innerText = m.toString().padStart(2, '0');
+            sEl.innerText = s.toString().padStart(2, '0');
+        } else {
+            // If elements are gone (user moved to another page), stop the timer
+            clearInterval(window.timerInterval);
+        }
+        
+        totalSeconds--;
+        if (totalSeconds < 0) clearInterval(window.timerInterval);
+    }, 1000);
+}
 
 
-    // 4. LOGOUT
     function logout() {
         localStorage.removeItem('currentUser');
         window.location.href = 'login.html';
     }
-
-        // Load default page based on role
-        if (role === 'Admin') loadContent('adminhealth');
-        else loadContent('home');
-    }
-    function logout() {
-        localStorage.removeItem('currentUser');
-        window.location.href = 'login.html';
-    }
-    // Simple helper function for the Copy interaction
+   
 function copyCoupon(code, btn) {
     navigator.clipboard.writeText(code);
     const originalText = btn.innerText;
@@ -853,5 +1035,6 @@ function copyCoupon(code, btn) {
         btn.classList.replace('btn-success', 'btn-plum');
     }, 2000);
 }
+
 
     init();
