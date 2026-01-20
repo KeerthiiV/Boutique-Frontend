@@ -1,9 +1,5 @@
 const user = JSON.parse(localStorage.getItem('currentUser'));
-if (!user) {
-    window.location.href = 'login.html';
-}
-
-    // 2. LANDING PAGES CONTENT (The "Inner Pages")
+if (!user) {window.location.href = 'login.html';}
   const pages = {
         // --- CLIENT PAGES ---
         home:`
@@ -17,68 +13,48 @@ if (!user) {
             </div>
     <div class="card p-0 border-0 shadow-sm overflow-hidden mb-5">
                 <div class="row g-0 align-items-center">
-                    <div class="col-md-2 bg-plum text-white text-center py-4">
+                    <div class="col-md-2 bg-plum text-white text-center py-4" data-aos="fade-up" data-aos-delay="100">
                         <i class="bi bi-truck display-3"></i>
                     </div>
-                    <div class="col-md-10 p-4 bg-white">
+                    <div class="col-md-10 p-4 bg-white" data-aos="fade-up" data-aos-delay="200">
                         <div class="d-flex justify-content-between mb-2">
                             <h6 class="fw-bold m-0">Tracking Order #ELG-8821</h6>
                             <span class="text-plum fw-bold small">65% Completed</span>
                         </div>
-                        <div class="progress mb-2" style="height: 10px;"><div class="progress-bar bg-plum" style="width: 65%"></div></div>
-                        <div class="d-flex justify-content-between small text-muted">
+                        <div class="progress mb-2" style="height: 10px;"><div class="progress-bar bg-plum" style="width: 65%" data-aos-delay="300"></div></div>
+                        <div class="d-flex justify-content-between small text-muted" data-aos="fade-up" data-aos-delay="400">
                             <span>Status: In Transit</span>
                             <span>ETA: Tomorrow, 4:00 PM</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-    
-
+                        </div></div></div></div>
     <!-- Shop by Category -->
     <div class="row mb-5 text-center">
         <h5 class="fw-semibold mb-3">Shop by Category</h5>
-        <div class="col-3">
-            <img src="images/images (23).jpeg" class="rounded-circle mb-2" alt="Saree">
-            <p class="small">Sarees</p>
+        <div class="col-3" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/images (14).jpeg" class="rounded-circle mb-2" alt="Saree"><p class="small">Sarees</p>
         </div>
-        <div class="col-3">
-            <img src="images/images (23).jpeg" class="rounded-circle mb-2" alt="Party Wear">
+        <div class="col-3" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/party.jpg" class="rounded-circle mb-2" alt="Party Wear">
             <p class="small">Party Wear</p>
         </div>
-        <div class="col-3">
-            <img src="images/images (23).jpeg" class="rounded-circle mb-2" alt="Daily Wear">
+        <div class="col-3" data-aos="fade-up" data-aos-delay="400">
+            <img src="images/images (21).jpeg" class="rounded-circle mb-2" alt="Daily Wear">
             <p class="small">Daily Wear</p>
         </div>
-        <div class="col-3">
-            <img src="images/images (23).jpeg" class="rounded-circle mb-2" alt="Wedding">
+        <div class="col-3" data-aos="fade-up" data-aos-delay="500">
+            <img src="images/wedding.jpg" class="rounded-circle mb-2" alt="Wedding">
             <p class="small">Wedding</p>
         </div>
     </div>
-
     <!-- Flash Sale -->
     <div class="row mb-5">
-    <div class="col-12 px-0">
-        <div class="position-relative d-flex align-items-center justify-content-center text-center overflow-hidden shadow-lg" 
-             style="min-height: 450px; background-color: var(--plum); border-radius: 8px;">
-            
-            <img src="https://images.unsplash.com/photo-1610030469668-935142b96fe4?auto=format&fit=crop&w=1600&q=80" 
-                 alt="Designer Couture" 
-                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55;">
-
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(75, 54, 72, 0.75), rgba(0,0,0,0.4));"></div>
-
+    <div class="col-12 px-0" data-aos="zoom-in">
+        <div class="position-relative d-flex align-items-center justify-content-center text-center overflow-hidden shadow-lg " 
+             style="min-height: 450px; background-color: var(--accent-olive); border-radius: 8px;">
+            <img src="images/bg.jpg" alt="Designer Couture" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(168, 246, 179, 0.47), rgba(0,0,0,0.4));"></div>
             <div class="position-relative z-1 px-4 text-white">
-                <span class="badge rounded-pill mb-3 px-4 py-2" 
-                      style="background-color: var(--accent-olive); letter-spacing: 3px; font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.3);">
-                      LIMITED TIME OFFER
-                </span>
-                
-                <h1 class="display-3 fw-bold mb-3" style="font-family: 'Playfair Display'; letter-spacing: 4px;">
-                    ⚡ FLASH SALE
-                </h1>
-                
+                <span class="badge rounded-pill mb-3 px-4 py-2" style="background-color: var(--accent-olive); letter-spacing: 3px; font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.3);">LIMITED TIME OFFER</span> 
+                <h1 class="display-3 fw-bold mb-3" style="font-family: 'Playfair Display'; letter-spacing: 4px;">⚡ FLASH SALE</h1>
                 <div class="d-flex justify-content-center gap-3 mb-4 mt-2">
                     <div class="countdown-card">
                         <span id="hours" class="fs-2 fw-bold d-block">23</span>
@@ -93,100 +69,76 @@ if (!user) {
                         <small class="text-uppercase" style="font-size: 0.6rem; letter-spacing: 1px;">Secs</small>
                     </div>
                 </div>
-
-                <p class="fs-5 mb-4 text-uppercase fw-light" style="letter-spacing: 4px;">
-                    Flat <span class="fw-bold" style="color: #ffd700;">30% OFF</span> on Wedding Collection
-                </p>
-                
+                <p class="fs-5 mb-4 text-uppercase fw-light" style="letter-spacing: 4px;">Flat <span class="fw-bold" style="color: #ffd700;">30% OFF</span> on Wedding Collection</p>
                 <div class="d-flex gap-3 justify-content-center">
-                    <button class="btn btn-light px-5 py-2 rounded-0 fw-bold text-plum shadow-sm">
-                        SHOP COLLECTION
-                    </button>
-                    <button class="btn btn-outline-light px-4 py-2 rounded-0 fw-bold">
-                        CODE: STYLE30
-                    </button>
+                    <button class="btn btn-light px-5 py-2 rounded-0 fw-bold text-plum shadow-sm">SHOP COLLECTION</button>
+                    <button class="btn btn-outline-light px-4 py-2 rounded-0 fw-bold">CODE: STYLE30</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
     <!-- Trending Products -->
     <div class="row mb-5">
-        <h5 class="fw-semibold mb-3">Trend Setters 🔥</h5>
-        <div class="col-md-4">
-            <div class="card shadow-sm h-100">
-                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=500&q=80" class="card-img-top" style="height:450px;">
+        <h5 class="fw-semibold mb-3" data-aos="fade-down">Trend Setters 🔥</h5>
+        <div class="col-md-4" data-aos="fade-up">
+            <div class="card shadow-hover h-100">
+                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=500&q=80" class="card-img-top" style="height:400px;">
                 <div class="card-body">
                     <h6 class="card-title">Designer Saree</h6>
                     <p class="small text-muted">⭐ 4.8 (320 reviews)</p>
                     <p class="fw-semibold">₹2,999</p>
                    <div class="product-actions-container">
                     <button class="btn btn-quick-purchase">Quick Purchase</button>
-                    <button class="btn btn-wishlist-outline">
-                        <i class="bi bi-heart"></i>
-                    </button>
+                    <button class="btn btn-wishlist-outline"><i class="bi bi-heart"></i></button>
+                   </div>
                 </div>
-                </div>
-                
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card shadow-sm h-100">
-                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=500&q=80" class="card-img-top" style="height:450px;">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card shadow-hover h-100">
+                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=500&q=80" class="card-img-top" style="height:400px;">
                 <div class="card-body">
                     <h6 class="card-title">Party Wear Gown</h6>
                     <p class="small text-muted">⭐ 4.6 (210 reviews)</p>
                     <p class="fw-semibold">₹4,499</p>
                     <div class="product-actions-container">
                     <button class="btn btn-quick-purchase">Quick Purchase</button>
-                    <button class="btn btn-wishlist-outline">
-                        <i class="bi bi-heart"></i>
-                    </button>
+                    <button class="btn btn-wishlist-outline"><i class="bi bi-heart"></i></button>
                 </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card shadow-sm h-100">
-                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=500&q=80" class="card-img-top" style="height:450px;">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card shadow-hover h-100">
+                <img src="images/wed lehanga.jpg" class="card-img-top" style="height:400px;">
                 <div class="card-body">
                     <h6 class="card-title">Wedding Lehenga</h6>
                     <p class="small text-muted">⭐ 4.9 (500+ reviews)</p>
                     <p class="fw-semibold">₹8,999</p>
                     <div class="product-actions-container">
                     <button class="btn btn-quick-purchase">Quick Purchase</button>
-                    <button class="btn btn-wishlist-outline">
-                        <i class="bi bi-heart"></i>
-                    </button>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <button class="btn btn-wishlist-outline"><i class="bi bi-heart"></i></button>
+                </div></div></div></div></div>
 <div class="row g-4 mb-5 pb-5">
-    
     <div class="col-12 px-3">
-        <div class="card border-0 overflow-hidden shadow-lg offer-banner-animated" 
-             style="border-radius: 12px; transition: transform 0.4s ease;">
+        <div class="card border-0 overflow-hidden shadow-lg offer-banner-animated" style="border-radius: 12px; transition: transform 0.4s ease;">
             <div class="row g-0">
-                <div class="col-md-3 d-none d-md-flex align-items-center justify-content-center position-relative" 
-                     style="background: var(--plum); overflow: hidden;">
+                <div class="col-md-3 d-none d-md-flex align-items-center justify-content-center position-relative" data-aos="fade-up" style="background: var(--seconadry-text); overflow: hidden;">
                     <i class="bi bi-stars text-white fs-1 opacity-25 floating-icon"></i>
                     <div class="shimmer-effect"></div>
                 </div>
-                
                 <div class="col-md-9">
-                    <div class="card-body p-4 text-center text-md-start d-flex flex-column flex-md-row align-items-center justify-content-between" 
+                    <div class="card-body p-4 text-center text-md-start d-flex flex-column flex-md-row align-items-center justify-content-between " 
                          style="background: linear-gradient(90deg, var(--accent-olive) 0%, #80a035 100%); color: white;">
                         <div class="animate-text">
                             <h4 class="fw-bold mb-1" style="font-family: 'Playfair Display'; letter-spacing: 1px;">✨ Festive Luxe Edit</h4>
                             <p class="mb-0 small opacity-90">Unlock an extra 25% off your next purchase.</p>
                         </div>
                         <div class="mt-3 mt-md-0">
-                            <div class="coupon-tag shadow-sm">
-                                <span class="small opacity-75 me-1">CODE:</span> 
-                                <span class="fw-bold" style="color: var(--plum);">STYLE25</span>
+                            <div class="coupon-tag ">
+                                <span class="small opacity-75 me-1" >CODE:</span> 
+                                <span class="fw-bold" style="color: var(--primary-text);">STYLE25</span>
                             </div>
                         </div>
                     </div>
@@ -194,10 +146,8 @@ if (!user) {
             </div>
         </div>
     </div>
-
     <div class="col-md-7 mx-auto mt-5">
-        <div class="card border-0 shadow-lg concierge-card-float p-2" 
-             style="border-radius: 25px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.4);">
+        <div class="card border-0 shadow-lg concierge-card-float p-2" style="border-radius: 25px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.4);">
             <div class="card-body text-center py-4">
                 <div class="position-relative mx-auto mb-4" style="width: 80px; height: 80px;">
                     <div class="bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center w-100 h-100 border">
@@ -205,19 +155,13 @@ if (!user) {
                     </div>
                     <span class="position-absolute top-0 end-0 translate-middle p-2 bg-success border border-light rounded-circle pulse-online"></span>
                 </div>
-                
                 <h5 class="fw-bold text-plum mb-2" style="font-family: 'Playfair Display';">Boutique Concierge</h5>
                 <p class="text-muted small px-lg-5 mb-4">
                     Our master stylists are currently online and ready to help you find the perfect fit.
                 </p>
-                
                 <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                    <button class="btn btn-plum rounded-pill px-4 py-2 shadow transition-button">
-                        <i class="bi bi-whatsapp me-2"></i> START CHATTING
-                    </button>
-                    <button class="btn btn-outline-olive rounded-pill px-4 py-2">
-                        EMAIL US
-                    </button>
+                    <button class="btn btn-plum rounded-pill px-4 py-2 shadow transition-button"><i class="bi bi-whatsapp me-2"></i> START CHATTING</button>
+                    <button class="btn btn-light  px-4 py-2">EMAIL US</button>
                 </div>
             </div>
         </div>
@@ -370,22 +314,21 @@ if (!user) {
             </table>
         </div>
     </div>
-    
     <p class="text-center text-muted mt-4 small">Showing your recent purchases from the last 6 months.</p>
 </div>`,
         trackorder: `
            <div class="container-fluid">
     <div class="row mb-4">
-        <div class="col text-center">
+        <div class="col text-center" data-aos="fade-up">
             <h2 class="fw-semibold">Track Orders</h2>
             <p class="text-muted">Follow your order delivery status</p>
         </div>
     </div>
-    <div class="card shadow-sm mb-4">
+    <div class="card shadow-sm mb-4" data-aos="fade-up">
         <div class="card-header fw-semibold">
             Order ID :#ORD1023
         </div>
-        <div class="card-body">
+        <div class="card-body" data-aos="fade-up" >
             <ul class="order-timeline">
                 <li class="completed">
                     <span class="dot"></span>
@@ -420,16 +363,14 @@ if (!user) {
                         <h6>Delivered</h6>
                     </div>
                 </li>
-
             </ul>
-
         </div>
     </div>
-    <div class="card shadow-sm mb-4">
+    <div class="card shadow-sm mb-4" data-aos="fade-up">
         <div class="card-header fw-semibold">
             Order ID :#ORD1024
         </div>
-        <div class="card-body">
+        <div class="card-body" data-aos="fade-up">
             <ul class="order-timeline">
                 <li class="completed">
                     <span class="dot"></span>
@@ -453,8 +394,7 @@ if (!user) {
                 </li>
                 <li>
                     <span class="dot"></span>
-                    <div>
-                        <h6>Out for Delivery</h6>
+                    <div><h6>Out for Delivery</h6>
                     </div>
                 </li>
                 <li>
@@ -466,11 +406,11 @@ if (!user) {
             </ul>
         </div>
     </div>
-    <div class="card shadow-sm mb-4">
+    <div class="card shadow-sm mb-4" data-aos="fade-up">
         <div class="card-header fw-semibold">
             Order ID :#ORD1025
         </div>
-        <div class="card-body">
+        <div class="card-body" data-aos="fade-up">
             <ul class="order-timeline">
                 <li>
                     <span class="dot"></span>
@@ -508,17 +448,14 @@ if (!user) {
 </div>`,
 offers:`
     <div class="animate-fade-in p-3">
-        
         <div class="text-center mb-5">
             <h2 class="fw-bold mb-1" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">Exclusive Rewards</h2>
             <div class="mx-auto" style="width: 40px; height: 1px; background-color: var(--accent-olive); margin-top: 10px;"></div>
         </div>
-
         <div class="row mb-5">
             <div class="col-12">
-                <h5 class="fw-bold mb-4" style="font-family: 'Playfair Display'; color: var(--plum);"><i class="bi bi-ticket-perforated me-2"></i>Available Coupons</h5>
-                
-                <div class="card border-0 mb-3 shadow-sm coupon-card">
+                <h5 class="fw-bold mb-4" style="font-family: 'Playfair Display'; color: var(--plum);"><i class="bi bi-ticket-perforated me-2"></i>Available Coupons</h5> 
+                <div class="card border-0 mb-3 shadow-hover coupon-card"  data-aos="fade-up" data-aos-delay="100" >
                     <div class="card-body p-0 d-flex align-items-center">
                         <div class="bg-plum text-white p-4 text-center d-flex flex-column justify-content-center" style="min-width: 150px; border-right: 2px dashed #ffffff55;">
                             <h4 class="fw-bold mb-0">20%</h4>
@@ -534,7 +471,7 @@ offers:`
                     </div>
                 </div>
 
-                <div class="card border-0 mb-3 shadow-sm coupon-card">
+                <div class="card border-0 mb-3 shadow-hover coupon-card"  data-aos="fade-up" data-aos-delay="200">
                     <div class="card-body p-0 d-flex align-items-center">
                         <div class="bg-olive text-white p-4 text-center d-flex flex-column justify-content-center" style="min-width: 150px; border-right: 2px dashed #ffffff55; background-color: var(--accent-olive);">
                             <h4 class="fw-bold mb-0">FREE</h4>
@@ -551,9 +488,8 @@ offers:`
                 </div>
             </div>
         </div>
-
         <div class="row g-4">
-            <div class="col-md-6">
+            <div class="col-md-6"  data-aos="zoom-in">
                 <div class="offer-banner position-relative overflow-hidden shadow" style="height: 250px; border-radius: 8px;">
                     <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" class="w-100 h-100 object-fit-cover" alt="Festive Sale">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center p-4" style="background: linear-gradient(to right, rgba(75, 54, 72, 0.9), transparent);">
@@ -566,13 +502,12 @@ offers:`
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6">
+            <div class="col-md-6"  data-aos="zoom-in" data-aos-delay="100">
                 <div class="offer-banner position-relative overflow-hidden shadow" style="height: 250px; border-radius: 8px;">
                     <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80" class="w-100 h-100 object-fit-cover" alt="Winter Collection">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center p-4" style="background: linear-gradient(to right, rgba(107, 142, 35, 0.9), transparent);">
                         <div class="text-white">
-                            <span class="badge mb-2" style="background: var(--plum);">Exclusive</span>
+                            <span class="badge mb-2" style="background: var(--accent-olive);">Exclusive</span>
                             <h3 class="fw-bold" style="font-family: 'Playfair Display';">Winter Edit</h3>
                             <p class="small opacity-75">Buy 2 Get 1 Free on Wraps & Shawls</p>
                             <button class="btn btn-light btn-sm rounded-0 px-3 mt-2">View Edit</button>
@@ -583,11 +518,10 @@ offers:`
         </div>
     </div>
 <div class="row mt-5">
-    <div class="col-12">
+    <div class="col-12"  data-aos="fade-up" data-aos-delay="100">
         <div class="hero-banner position-relative overflow-hidden shadow-lg" style="height: 300px; border-radius: 12px; background: #000;">
             <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1600&q=80" 
                  class="w-100 h-100 object-fit-cover opacity-50" alt="Clearance Sale">
-            
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-5">
                 <div class="animate-reveal">
                     <span class="text-white text-uppercase small mb-3 d-block" style="letter-spacing: 5px;">Limited Time Only</span>
@@ -599,24 +533,18 @@ offers:`
                     <button class="btn btn-light btn-lg rounded-0 px-5 fw-bold text-plum hover-grow">Shop the Sale</button>
                 </div>
             </div>
-
             <div style="position:absolute; top:20px; bottom:20px; left:20px; right:20px; border: 1px solid rgba(255,255,255,0.2); pointer-events:none;"></div>
         </div>
     </div>
-</div>
-    `,
-    wishlist: `
-    <div class="animate-fade-in p-3">
-        
+</div>`,
+    wishlist: `<div class="animate-fade-in p-3">  
         <div class="text-center mb-5">
             <h2 class="fw-bold mb-1" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">My Wishlist</h2>
             <p class="text-muted small text-uppercase" style="letter-spacing: 2px;">Items you've fallen in love with</p>
             <div class="mx-auto" style="width: 40px; height: 1px; background-color: var(--accent-olive); margin-top: 10px;"></div>
         </div>
-
         <div class="row g-4">
-
-            <div class="col-md-6 col-lg-4 wishlist-item">
+            <div class="col-md-6 col-lg-4 wishlist-item" data-aos="fade-up">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden">
                     <div class="position-relative product-container">
                         <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=500&q=80" class="card-img-top object-fit-cover" alt="Floral Kurti" style="height: 300px;">
@@ -627,7 +555,7 @@ offers:`
                             <i class="bi bi-x-lg"></i>
                         </button>
                     </div>
-                    <div class="card-body text-center p-4">
+                    <div class="card-body text-center p-4" data-aos="fade-up" data-aos-delay="100">
                         <h6 class="fw-bold mb-1" style="font-family: 'Playfair Display'; font-size: 1.1rem;">Floral Kurti</h6>
                         <p class="text-plum fw-bold mb-3">₹899</p>
                         <button class="btn btn-plum w-100 rounded-0 py-2 hover-grow">
@@ -636,8 +564,7 @@ offers:`
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-4 wishlist-item">
+            <div class="col-md-6 col-lg-4 wishlist-item" data-aos="fade-up" data-aos-delay="200" >
                 <div class="card border-0 shadow-sm h-100 overflow-hidden">
                     <div class="position-relative product-container">
                         <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover" alt="Denim Jacket" style="height: 300px;">
@@ -658,39 +585,30 @@ offers:`
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 wishlist-item">
+            <div class="col-md-6 col-lg-4 wishlist-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden opacity-75">
                     <div class="position-relative product-container">
                         <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=500&q=80" class="card-img-top object-fit-cover grayscale" alt="Silk Saree" style="height: 300px; filter: grayscale(1);">
                         <div class="status-overlay position-absolute top-0 start-0 m-3">
                             <span class="badge rounded-pill bg-dark text-white shadow-sm px-3 py-2" style="font-size: 0.65rem;">OUT OF STOCK</span>
                         </div>
-                        <button class="remove-btn position-absolute top-0 end-0 m-3 btn btn-light btn-sm rounded-circle shadow-sm">
-                            <i class="bi bi-x-lg"></i>
-                        </button>
+                        <button class="remove-btn position-absolute top-0 end-0 m-3 btn btn-light btn-sm rounded-circle shadow-sm"><i class="bi bi-x-lg"></i></button>
                     </div>
                     <div class="card-body text-center p-4">
                         <h6 class="fw-bold mb-1" style="font-family: 'Playfair Display'; font-size: 1.1rem;">Royal Silk Saree</h6>
                         <p class="text-muted mb-3">₹2,999</p>
-                        <button class="btn btn-secondary w-100 rounded-0 py-2" disabled>
-                            NOTIFY ME
-                        </button>
+                        <button class="btn btn-secondary w-100 rounded-0 py-2" disabled>NOTIFY ME</button>
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
-    `,
-   address:`
-    <div class="animate-fade-in p-3">
-        
+    </div>`,
+   address:`<div class="animate-fade-in p-3">    
         <div class="text-center mb-5">
             <h2 class="fw-bold mb-1" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">Shipping Addresses</h2>
             <p class="text-muted small text-uppercase" style="letter-spacing: 2px;">Where should we send your luxury pieces?</p>
             <div class="mx-auto" style="width: 40px; height: 1px; background-color: var(--accent-olive); margin-top: 10px;"></div>
         </div>
-
         <div class="row mb-4">
             <div class="col text-end">
                 <button class="btn btn-plum px-4 py-2 rounded-0 shadow-sm" style="font-size: 0.85rem; letter-spacing: 1px;">
@@ -698,9 +616,7 @@ offers:`
                 </button>
             </div>
         </div>
-
         <div class="row g-4">
-
             <div class="col-md-6 col-lg-4 address-item">
                 <div class="card h-100 border-0 shadow-sm position-relative overflow-hidden" 
                      style="border-top: 3px solid var(--accent-olive) !important;">
@@ -714,11 +630,9 @@ offers:`
                                 <i class="bi bi-three-dots-vertical text-muted cursor-pointer" data-bs-toggle="dropdown"></i>
                             </div>
                         </div>
-                        
                         <h6 class="fw-bold mb-1" style="font-family: 'Playfair Display';">Keerthi V</h6>
                         <p class="card-text text-secondary small lh-lg">
-                            12, MG Road<br>
-                            Bengaluru, Karnataka – 560001<br>
+                            12, MG Road<br>Bengaluru, Karnataka – 560001<br>
                             <span class="text-plum"><i class="bi bi-telephone me-2"></i>9876543210</span>
                         </p>
                         
@@ -738,14 +652,11 @@ offers:`
                                 <i class="bi bi-briefcase me-1"></i> OFFICE
                             </span>
                         </div>
-                        
                         <h6 class="fw-bold mb-1" style="font-family: 'Playfair Display';">Keerthi V</h6>
                         <p class="card-text text-secondary small lh-lg">
-                            5th Floor, Tech Park<br>
-                            Chennai, Tamil Nadu – 600028<br>
+                            5th Floor, Tech Park<br>Chennai, Tamil Nadu – 600028<br>
                             <span class="text-plum"><i class="bi bi-telephone me-2"></i>9123456780</span>
                         </p>
-                        
                         <div class="d-flex gap-2 mt-4 pt-3 border-top">
                             <button class="btn btn-sm btn-outline-plum rounded-0 flex-grow-1" style="font-size: 0.75rem;">SET AS DEFAULT</button>
                             <button class="btn btn-sm btn-outline-danger rounded-0 px-3" style="font-size: 0.75rem;"><i class="bi bi-trash"></i></button>
@@ -753,13 +664,9 @@ offers:`
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
-    `,
-    paymentmethod:`
-    <div class="animate-fade-in p-3">
-        
+    </div>`,
+    paymentmethod:`<div class="animate-fade-in p-3">
         <div class="text-center mb-5">
             <h2 class="fw-bold mb-1" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">Payment Methods</h2>
             <p class="text-muted small text-uppercase" style="letter-spacing: 2px;">Your secure checkout preferences</p>
@@ -811,7 +718,6 @@ offers:`
         </div>
     </div>
 </div>
-
             <div class="col-md-6 col-lg-4 payment-item">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden" style="background: linear-gradient(135deg, #636e72 0%, #2d3436 100%); color: white; border-radius: 12px;">
                     <div class="card-body p-4 d-flex flex-column justify-content-between" style="min-height: 200px;">
@@ -851,8 +757,7 @@ offers:`
                 </div>
             </div>
         </div>
-    </div>
-    `,
+    </div>`,
 notification:`
     <div class="animate-fade-in p-3">
         
@@ -914,13 +819,11 @@ notification:`
                     </p>
                 </div>
             </div>
-
         </div>
-    </div>
-    `,
+    </div> `,
 
         // --- ADMIN PAGES ---
-        adminhealth: `
+        adminhome: `
         <h2 class="fw-bold mb-4" style="font-family: 'Playfair Display';">System Health</h2>
             <div class="row g-4">
                 <div class="col-md-3">
