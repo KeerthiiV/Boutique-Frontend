@@ -6,7 +6,7 @@
     --accent-olive: #A3B18A;
     --accent-hover: #588157;
     --pure-white: #ffffff;
-    --text-olive-drab: #3F4A3C;
+    --text-olive-drab: #3d4d39;
 }
 
 body {
@@ -177,9 +177,6 @@ h1, h2, h3, h4, h5, .navbar-brand {
 }
 
 
-#dashboardContent td {
-    border: 5px solid transparent;
-}
 /* COMPONENTS */
 .feature-card {
     border-right: 1px solid rgba(163, 177, 138, 0.2);
@@ -218,26 +215,27 @@ h1, h2, h3, h4, h5, .navbar-brand {
     opacity: 1; 
 }
 .form-control, .form-select {
-            border: 1px solid var(--plum-soft);
+            border: 1px solid #6c757d;   /* visible gray outline */
+            border-radius: 6px;
             padding: 12px;
             font-size: 0.9rem;
             background: rgba(255, 255, 255, 0.5);
-        }
+}
 
-        .form-control:focus, .form-select:focus {
+.form-control:focus, .form-select:focus {
             border-color: var(--plum-accent);
             box-shadow: none;
             background: #fff;
-        }
+}
 
-        .input-label {
+.input-label {
             font-size: 0.7rem;
             letter-spacing: 1.5px;
             color: var(--plum-accent);
             text-transform: uppercase;
             font-weight: 600;
             margin-bottom: 5px;
-        }
+}
 .bg-plum { 
     background-color: var(--accent-olive) !important; 
 }

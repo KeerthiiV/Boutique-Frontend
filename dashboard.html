@@ -89,8 +89,7 @@
                 <a href="profile.html" class="nav-link-dash p-2 small"><i class="bi bi-person me-2"></i> My Profile</a>
                 <span id="displayRole" class="badge role-badge">ROLE</span>
             </div>
-            <div id="sidebarMenu">
-                </div>
+            <div id="sidebarMenu"></div>
             <a href="javascript:void(0)" onclick="logout()" class="nav-link-dash mt-5 text-danger border-top pt-4">
                 <i class="bi bi-box-arrow-left me-2"></i> Logout
             </a>
@@ -104,6 +103,7 @@
 </div>
 <script src="js/dashboard.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
         AOS.init({ 
@@ -119,28 +119,37 @@
                 document.querySelector('.navbar').classList.remove('bg-white');
             }
         });
-
-const observer = new MutationObserver(() => {
-    const ctx = document.getElementById('salesChart');
-    if (ctx) {
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-                datasets: [{
-                    label: 'Sales Revenue (₹)',
-                    data: [45000, 52000, 48000, 70000, 65000, 95000, 88000],
-                    borderColor: '#4B3648',
-                    backgroundColor: 'rgba(75, 54, 72, 0.1)',
-                    fill: true,
-                    tension: 0.4
-                }]
-            },
-            options: { plugins: { legend: { display: false } } }
-        });
+const ctx=document.getElementById('salesChart');
+new Chart(ctx,{
+    type:'line',
+    data:{
+        labels:['Jan','Feb','Mar','Apr','May','June'],
+        datasets:[{
+            label:'Monthly Sales',
+            data:[12000,19000,15000,22000,18000,25000],
+            borderWidth:2,fill:false
+        }]
+    },
+    options:{
+        responsive:true,
+        animation:{
+            duration:1500,
+            easing:'easeInOutCubic'
+        },
+        plugins:{
+            legend:{display:true}
+        },
+        scales:{
+            y:{beginAtZero:true}
+        }
     }
 });
-observer.observe(document.getElementById('dashboardContent'), { childList: true });
+
+// Observe the dashboardContent div for changes
+const target = document.getElementById('dashboardContent');
+if (target) {
+    contentObserver.observe(target, { childList: true });
+}
     </script>
 </body>
 </html>
