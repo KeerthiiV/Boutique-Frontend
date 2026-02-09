@@ -78,49 +78,49 @@ if (!user) {window.location.href = 'login.html';}
                 <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
                     <button class="btn btn-plum rounded-pill px-4 py-2 shadow transition-button"><i class="bi bi-whatsapp me-2"></i> START CHATTING</button><button class="btn btn-light  px-4 py-2">EMAIL US</button></div>
             </div></div></div></div>`,
-        newarrivals: `<div class="d-flex justify-content-between align-items-center mb-4"><h4 class="fw-bold text-olive-drab mb-1">NEW ARRIVALS</h4>
+        newarrivals: `<div class="d-flex justify-content-between align-items-center mb-4"  data-aos="fade-up"><h4 class="fw-bold text-olive-drab mb-1">NEW ARRIVALS</h4>
                 <div class="position-relative"><button class="btn btn-plum"><i class="bi bi-cart3 me-2"></i>Cart</button><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">1</span></div>
             </div>
             <div class="row g-4 mb-5">
-               <div class="col-md-4">
+               <div class="col-md-4"  data-aos="fade-up">
                     <div class="card h-100 border-0 shadow-hover overflow-hidden">
                         <div class="position-relative"><img src="images/images (30).jpeg" class="card-img-top" style="height:320px; object-fit:cover;"><span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-0 px-3 py-2 shadow-sm">NEW</span></div>
                         <div class="card-body text-center bg-white p-4"><h6 class="fw-bold">Banarasi Silk Saree</h6><p class="text-plum fw-bold fs-5">₹12,500</p><button class="btn btn-plum w-100 rounded-0">Quick Purchase</button></div>
                     </div></div>
-                <div class="col-md-4">
+                <div class="col-md-4"  data-aos="fade-up" data-aos-delay="100">
                     <div class="card h-100 border-0 shadow-hover overflow-hidden">
                         <div class="position-relative"><img src="images/AD804-1500x1500.jpg" class="card-img-top" style="height:320px; object-fit:cover;"><span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-0 px-3 py-2 shadow-sm">NEW</span></div>
                         <div class="card-body text-center bg-white p-4"><h6 class="fw-bold">Royal Wedding Lehanga</h6><p class="text-plum fw-bold fs-5">₹25,000</p><button class="btn btn-plum w-100 rounded-0">Quick Purchase</button></div>
                     </div></div>
-                <div class="col-md-4">
+                <div class="col-md-4"  data-aos="fade-up" data-aos-delay="200">
                     <div class="card h-100 border-0 shadow-hover overflow-hidden">
                         <div class="position-relative"><img src="images/images (21).jpeg" class="card-img-top" style="height:320px; object-fit:cover;"><span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-0 px-3 py-2 shadow-sm">NEW</span></div>
                         <div class="card-body text-center bg-white p-4"><h6 class="fw-bold">Embroidered Ethnic Kurthi</h6><p class="text-plum fw-bold fs-5">₹5,000</p><button class="btn btn-plum w-100 rounded-0">Quick Purchase</button></div>
                     </div></div></div>
              <div class="row g-4 mb-5">
-               <div class="col-md-4">
+               <div class="col-md-4"  data-aos="fade-up" data-aos-delay="300">
                     <div class="card h-100 border-0 shadow-hover overflow-hidden">
                         <div class="position-relative"><img src="images/princely-blue-printed-designer-gown-267246-1000x1375.jpg" class="card-img-top" style="height:320px; object-fit:cover;"><span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-0 px-3 py-2 shadow-sm">NEW</span></div>
                         <div class="card-body text-center bg-white p-4"><h6 class="fw-bold">Printed Designer Gown</h6><p class="text-plum fw-bold fs-5">₹3,500</p><button class="btn btn-plum w-100 rounded-0">Quick Purchase</button></div>
                     </div></div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="card h-100 border-0 shadow-hover overflow-hidden">
                         <div class="position-relative"><img src="images/images (23).jpeg" class="card-img-top" style="height:320px; object-fit:cover;"><span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-0 px-3 py-2 shadow-sm">NEW</span></div>
                         <div class="card-body text-center bg-white p-4"><h6 class="fw-bold">Churidar Material</h6><p class="text-plum fw-bold fs-5">₹2,500</p><button class="btn btn-plum w-100 rounded-0">Quick Purchase</button></div>
                     </div></div>
-                <div class="col-md-4">
+                <div class="col-md-4"  data-aos="fade-up" data-aos-delay="500">
                     <div class="card h-100 border-0 shadow-hover overflow-hidden">
                         <div class="position-relative"><img src="images/images (14).jpeg" class="card-img-top" style="height:320px; object-fit:cover;"><span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-0 px-3 py-2 shadow-sm">NEW</span></div>
                         <div class="card-body text-center bg-white p-4"><h6 class="fw-bold">Customised saree</h6><p class="text-plum fw-bold fs-5">₹5,000</p><button class="btn btn-plum w-100 rounded-0">Quick Purchase</button></div>
                     </div></div></div>`,
 
-        myorders: `<div class="animate-fade-in">
+        myorders: `<div class="container-fluid">
     <div class="text-center mb-5">
-        <h2 class="fw-bold mb-1" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">My Orders</h2>
+        <h2 class="fw-bold mb-1" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up">My Orders</h2>
         <div class="mx-auto" style="width: 40px; height: 1px; background-color: var(--accent-olive); margin-top: 10px;"></div>
     </div>
-    <div class="card border-0 shadow-sm" style="border-radius: 4px;">
-        <div class="table-responsive">
+    <div class="card border-0 shadow-sm" style="border-radius: 4px;"  data-aos="fade-up">
+        <div class="table-responsive"  data-aos="fade-up" data-aos-delay="100">
             <table class="table align-middle mb-0 p-4 text-center">
                 <thead style="background-color: #fcfcfc; border-bottom: 1px solid #eee;"><tr class="text-uppercase small fw-bold" style="letter-spacing: 1px; color: var(--secondary-text);">
                         <th class="ps-4 py-3 border-0">Order ID</th><th class="ps-4 py-3 border-0">Date</th><th class="ps-4 py-3 border-0">Items</th><th class="ps-4 py-3 border-0">Total</th><th class="ps-4 py-3 border-0">Status</th><th class="ps-4 py-3 border-0 pe-4">Action</th></tr>
@@ -390,8 +390,8 @@ notification:`<div class="animate-fade-in p-3">
   adminhome :`<div class="container-fluid">
 <div class=" animate-fade-in d-flex justify-content-between align-items-center mb-4">
   <div>
-    <h4 class="fw-bold text-olive-drab mb-1">ADMIN DASHBOARD</h4>
-    <small class="text-muted">Overview of system activities</small>
+    <h2 class="fw-bold mb-1" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">Admin Dashboard</h2>
+    <small class="text-muted text-uppercase" style="letter-spacing: 2px;">Overview of system activities</small>
   </div>
   <button class="btn btn-plum shadow-sm px-4" onclick="window.print()"><i class="bi bi-file-earmark-pdf me-2"></i>Export Analytics</button>
 </div>
@@ -472,22 +472,23 @@ notification:`<div class="animate-fade-in p-3">
   <div class="card shadow-sm border-0 mb-4">
     <div class="card-body">
         <h6 class="fw-bold mb-3">Sales Overview</h6>
-        <div class=" sales-chart-box">
-            <canvas id="salesChart" height="100"></canvas>
+        <div class="sales-chart-box">
+            <canvas id="adminSalesChart" height="100"></canvas>
         </div></div></div></div>
   <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
     <div class="card shadow-sm border-0">
     <div class="card-body">
         <h6 class="fw-bold mb-3">Quick Actions</h6>
-        <button class="btn btn-outline-secondary btn-sm mb-2"><i class="bi bi-plus-circle"></i><span>Add Product</span></button>
-        <button class="btn btn-outline-secondary btn-sm mb-2"><i class="bi bi-bag-check"></i><span>View Orders</span></button>
+        <button class="btn btn-outline-secondary btn-sm mb-2"><i class="bi bi-plus-circle me-1"></i><span>Add Product</span></button>
+        <button class="btn btn-outline-secondary btn-sm mb-2"><i class="bi bi-bag-check me-1"></i><span>View Orders</span></button>
         <button class="btn btn-outline-secondary btn-sm mb-2"><i class="bi bi-people me-1"></i><span>Manage user</span></button>
         <button class="btn btn-outline-secondary btn-sm mb-2"><i class="bi bi-bar-chart me-1"></i><span>Reports</span></button>
       </div></div></div></div>`,
    
 clients:`<div class="container-fluid animate-fade-in p-4">
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-5" data-aos="fade-up">
-        <div><h4 class="fw-bold text-olive-drab mb-1">CLIENT DIRECTORY</h4></div>
+        <div><h2 class="fw-bold"style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">Client Diectory</h2>
+        <div class="mx-auto" style="width: 40px; height: 2px; background-color: var(--accent-olive); margin-top: 10px;"></div></div>
         <div class="mt-3 mt-md-0" data-aos="fade-up" data-aos-delay="100"><button class="btn btn-plum shadow-sm px-4"><i class="bi bi-person-plus me-2"></i>Register New Client</button>
         </div></div>
     <div class="row g-4 mb-5">
@@ -557,7 +558,8 @@ clients:`<div class="container-fluid animate-fade-in p-4">
     </div></div>`,
     salesStaff:`<div class="container-fluid animate-fade-in p-4">
 <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-up">
-  <div><h4 class="fw-bold text-olive-drab mb-1">SALES STAFF</h4><small class="text-muted">Manage sales team accounts and performance</small></div>
+  <div><h2 class="fw-bold" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">Sales Staff</h2>
+  <small class="text-muted" style="letter-spacing: 2px;">Manage sales team accounts and performance</small></div>
   <div class="mt-3 mt-md-0" data-aos="fade-up" data-aos-delay="100"><button class="btn btn-plum shadow-sm px-4"><i class="bi bi-person-plus me-2"></i>Register New Staff</button>
         </div></div>
 <div class="row g-3 mb-4">
@@ -607,7 +609,8 @@ clients:`<div class="container-fluid animate-fade-in p-4">
       </div></div></div>`,
 deliveryStaff: `<div class="container-fluid animate-fade-in p-4">
 <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-up">
-    <div><h4 class="fw-bold text-olive-drab mb-1">DELIVERY STAFF DIRECTORY</h4><small class="text-muted">Manage delivery team accounts and performance</small></div>
+    <div><h2 class="fw-bold" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">Delivery Staff Directory</h2>
+    <small class="text-muted" style="letter-spacing: 2px;">Manage delivery team accounts and performance</small></div>
    <div class="mt-3 mt-md-0" data-aos="fade-up" data-aos-delay="100"><button class="btn btn-plum shadow-sm px-4"><i class="bi bi-person-plus me-2"></i>Register New Staff</button>
         </div></div>
 <div class="row g-3 mb-4">
@@ -655,7 +658,8 @@ deliveryStaff: `<div class="container-fluid animate-fade-in p-4">
   </div></div></div>`,
 viewproducts:`<div class="container-fluid animate-fade-in p-4">
     <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-up">
-    <div><h4 class="fw-bold text-olive-drab mb-1">PRODUCT DETAILS</h4></div></div>
+    <div><h2 class="fw-bold" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">Product Details</h2>
+    <div class="mx-auto" style="width: 40px; height: 2px; background-color: var(--accent-olive); margin-top: 10px;"></div></div></div>
 <div class="row mb-4">
     <div class="col-md-4" data-aos="fade-up">
         <div class="card shadow-sm text-center">
@@ -706,25 +710,26 @@ viewproducts:`<div class="container-fluid animate-fade-in p-4">
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="images/images (14).jpeg" class="image-fluid rounded" style="height:100px;"></td>
+                    <td><img src="images/casual.jpg" class="image-fluid rounded" style="height:100px;"></td>
                     <td>women Kurthi</td><td>Casual</td><td>12,000</td><td>15</td><td><span class="badge bg-success">Available</span></td>
-                    <td><button class="btn btn-sm btn-warning">Edit</button><button class="btn btn-sm btn-danger">Delete</button></td>
+                    <td><button class="btn btn-sm btn-warning me-1">Edit</button><button class="btn btn-sm btn-danger me-1">Delete</button></td>
                 </tr>
                 <tr>
-                    <td><img src="images/images (14).jpeg" class="img-fluid rounded" style="height:100px;"></td>
-                    <td>saree</td><td>Designer</td><td>20,000</td><td>100</td><td><span class="badge bg-success">Available</span></td>
-                    <td><button class="btn btn-sm btn-warning">Edit</button><button class="btn btn-sm btn-danger">Delete</button></td>
+                    <td><img src="images/image_original_zoom.jpeg" class="img-fluid rounded" style="height:100px;"></td>
+                    <td>Saree</td><td>Designer</td><td>20,000</td><td>100</td><td><span class="badge bg-success">Available</span></td>
+                    <td><button class="btn btn-sm btn-warning me-1">Edit</button><button class="btn btn-sm btn-danger me-1">Delete</button></td>
                 </tr>
                 <tr>
-                    <td><img src="images/images (14).jpeg" class="img-fluid rounded" style="height:100px;"></td>
-                    <td>women Kurthi</td><td>Casual</td><td>12,00</td><td>15</td><td><span class="badge bg-success">Available</span></td>
-                    <td><button class="btn btn-sm btn-warning">Edit</button><button class="btn btn-sm btn-danger">Delete</button></td>
+                    <td><img src="images/lehanga.jpg" class="img-fluid rounded" style="height:100px;"></td>
+                    <td> Lehanga</td><td>Party wear</td><td>12,00</td><td>15</td><td><span class="badge bg-success">Available</span></td>
+                    <td><button class="btn btn-sm btn-warning me-1">Edit</button><button class="btn btn-sm btn-danger me-1">Delete</button></td>
                 </tr>
             </tbody></table>
     </div></div></div>`,
     allorders:`<div class="container-fluid animate-fade-in p-4">
     <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-up">
-    <div><h4 class="fw-bold text-olive-drab mb-1">ORDER DETAILS</h4></div>
+    <div><h2 class="fw-bold" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">Order Details</h2>
+    <div class="mx-auto" style="width: 40px; height: 2px; background-color: var(--accent-olive); margin-top: 10px;"></div></div>
 </div>
 <div class="row mb-4">
     <div class="col-md-4" data-aos="fade-up">
@@ -761,19 +766,28 @@ viewproducts:`<div class="container-fluid animate-fade-in p-4">
             </thead>
             <tbody>
                 <tr>
-                    <td>#ORD1021</td><td>Sona</td><td>22 Jan 2026</td><td>2,000</td><td>Online</td>
-                    <td><span class="badge bg-warning text-dark">Pending</span></td>
-                    <td><button class="btn btn-sm btn-primary">View</button></td>
-                    
-                </tr>
-                <tr>
-                    <td>#ORD1021</td><td>Sona</td><td>22 Jan 2026</td><td>2,000</td><td>Online</td>
-                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                    <td>#ORD1019</td><td>Jona</td><td>22 Jan 2026</td><td>2,500</td><td>Online</td>
+                    <td><span class="badge bg-success text-white">Success</span></td>
                     <td><button class="btn btn-sm btn-primary">View</button></td>
                 </tr>
                 <tr>
-                    <td>#ORD1021</td><td>Sona</td><td>22 Jan 2026</td><td>2,000</td><td>Online</td>
+                    <td>#ORD1018</td><td>Keerthana</td><td>22 Jan 2026</td><td>7000</td><td>Online</td>
                     <td><span class="badge bg-warning text-dark">Pending</span></td>
+                    <td><button class="btn btn-sm btn-primary">View</button></td>
+                </tr>
+                <tr>
+                    <td>#ORD1017</td><td>Chaithanya</td><td>22 Jan 2026</td><td>2,000</td><td>Online</td>
+                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                    <td><button class="btn btn-sm btn-primary">View</button></td>   
+                </tr>
+                <tr>
+                    <td>#ORD1016</td><td>Anju</td><td>20 Jan 2026</td><td>1,000</td><td>Online</td>
+                    <td><span class="badge bg-success text-white">Success</span></td>
+                    <td><button class="btn btn-sm btn-primary">View</button></td>
+                </tr>
+                <tr>
+                    <td>#ORD1015</td><td>Merlin</td><td>20 Jan 2026</td><td>800</td><td>Online</td>
+                    <td><span class="badge bg-success text-white">Success</span></td>
                     <td><button class="btn btn-sm btn-primary">View</button></td>
                 </tr>
             </tbody>
@@ -790,94 +804,60 @@ viewproducts:`<div class="container-fluid animate-fade-in p-4">
                 </tr>
             </thead>
             <tbody>
-                <tr class="table-warning">
-                    <td>#ORD1021</td><td>sibi</td><td>22 Jan 2026</td><td>2,000</td><td>Online</td>
+                <tr>
+                    <td>#ORD1018</td><td>Keerthana</td><td>22 Jan 2026</td><td>7000</td><td>Online</td>
+                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                    <td><button class="btn btn-sm btn-primary">View</button></td>
+                </tr>
+                <tr>
+                    <td>#ORD1017</td><td>Chaithanya</td><td>22 Jan 2026</td><td>2,000</td><td>Online</td>
                     <td><span class="badge bg-warning text-dark">Pending</span></td>
                     <td><button class="btn btn-sm btn-primary">View</button></td>  
-                </tr>
-                <tr>
-                    <td>#ORD1021</td><td>Sona</td><td>22 Jan 2026</td><td>2,000</td><td>Online</td>
-                    <td><span class="badge bg-warning text-dark">Pending</span></td>
-                    <td><button class="btn btn-sm btn-primary">View</button></td>
-                </tr>
-                <tr>
-                    <td>#ORD1021</td><td>Sona</td><td>22 Jan 2026</td><td>2,000</td><td>Online</td>
-                    <td><span class="badge bg-warning text-dark">Pending</span></td>
-                    <td><button class="btn btn-sm btn-primary">View</button></td>
                 </tr>
             </tbody>
         </table>
     </div></div></div></div></div>`,
     transaction:`<div class="container-fluid animate-fade-in p-4">
     <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-up">
-    <div><h4 class="fw-bold text-olive-drab mb-1">TRANSACTION MANAGEMENT</h4><small class="text-muted">Monitor all customer payments and transaction statuses</small></div>
+    <div><h2 class="fw-bold" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);">Transaction Management</h2>
+    <small class="text-muted text-uppercase" style="letter-spacing: 2px;">Monitor all customer payments and transaction statuses</small></div>
 </div>
 <div class="row g-3 mb-4">
     <div class="col-md-3" data-aos="fade-up">
         <div class="card shadow-sm text-center">
-            <div class="card-body">
-                <h6 class="text-muted">Total Revenue</h6>
-                <h4 class="fw-bold text-success">&#8377;2,45,000</h4>
-            </div>
-        </div>
-    </div>
+            <div class="card-body"><h6 class="text-muted">Total Revenue</h6><h4 class="fw-bold text-success">&#8377;2,45,000</h4></div>
+        </div></div>
     <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
         <div class="card shadow-sm text-center">
-            <div class="card-body">
-                <h6 class="text-muted">Succesful Payments</h6>
-                <h3 class="fw-bold text-primary">320</h3>
-            </div>
-        </div>
-    </div>
+            <div class="card-body"><h6 class="text-muted">Succesful Payments</h6><h3 class="fw-bold text-primary">320</h3></div>
+        </div></div>
     <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
         <div class="card shadow-sm text-center">
-            <div class="card-body">
-                <h6 class="text-muted"> Pending Transctions</h6>
-                <h3 class="fw-bold text-warning">12</h3>
-            </div>
-        </div>
-    </div>
+            <div class="card-body"><h6 class="text-muted"> Pending Transctions</h6><h3 class="fw-bold text-warning">12</h3></div>
+        </div></div>
     <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
         <div class="card shadow-sm text-center">
-            <div class="card-body">
-                <h6 class="text-muted"> Failed / Refunded</h6>
-                <h3 class="fw-bold text-danger">8</h3>
-            </div>
-        </div>
-    </div>
-</div>
+            <div class="card-body"><h6 class="text-muted"> Failed / Refunded</h6><h3 class="fw-bold text-danger">8</h3></div>
+        </div></div></div>
 <div class="card shadow-sm mb-4" data-aos="fade-up">
     <div class="card-body">
             <div class="row g-3">
-                <div class="col-md-3">
-                    <input type="text" class="form-control" placeholder="Transction/Order ID">
-                </div>
+                <div class="col-md-3"><input type="text" class="form-control" placeholder="Transction/Order ID"></div>
                 <div class="col-md-3">
                     <select class="form-select">
-                        <option selected>status</option>
-                        <option>Successful</option>
-                        <option>Pending</option>
-                        <option>Failed</option>
-                        <option>Refunded</option>
+                        <option selected>status</option><option>Successful</option><option>Pending</option><option>Failed</option><option>Refunded</option>
                     </select>
                 </div>
             <div class="col-md-3">
                 <select class="form-select">
-                        <option selected>Payment Method</option>
-                        <option>UPI</option>
-                        <option>Card</option>
-                        <option>Net Banking</option>
-                        <option><CODe></CODe></option>
+                        <option selected>Payment Method</option><option>UPI</option><option>Card</option><option>Net Banking</option><option><CODe></CODe></option>
                     </select>
             </div>
             <div class="col-md-3">
-                <button class="btn btn-primary w-100"><i class="bi bi-search"></i>Search</button>
-            </div>
-        </div>
-    </div>
-</div>
+                <button class="btn btn-primary w-100"><i class="bi bi-search"></i>Search</button></div>
+        </div></div></div>
 <div class="card shadow-sm" data-aos="fade-up">
-    <div class="card-header fw-bold"><i class="bi bi-clock-history"></i>Transaction History</div>
+    <div class="card-header fw-bold"><i class="bi bi-clock-history"></i> Transaction History</div>
     <div class="card-body table-responsive">
         <table class="table table-borded table-hover align-middle">
             <thead class="table-light">
@@ -903,19 +883,16 @@ viewproducts:`<div class="container-fluid animate-fade-in p-4">
                 </tr>
             </tbody>
         </table>
-    </div>
-</div>`,
+    </div></div>`,
     clientReport:`<div class="container-fluid mt-4 animate-fade-in p-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4 class="fw-bold"><i class="bi bi-people"></i>Client Report</h4>
+        <div><h2 class="fw-bold" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);" data-aos="fade-up"><i class="bi bi-people"></i> Client Report</h2>
+        <p class="text-muted" style="letter-spacing: 2px;"  data-aos="fade-up" data-aos-delay="100">This report provides insights into client activity and purchasing behaviour</p></div>
         <button class="btn btn-plum shadow-sm px-4" onclick="window.print()"><i class="bi bi-file-earmark-pdf me-2"></i>Export to PDF</button>
     </div>
-    <p class="text-muted">This report provides insights into client activity and purchasing behaviour</p>
-    <div class="card shadow-sm mb-4">
-        <div class="card-header fw-bold">
-            <i class="bi bi-table"></i>Client Report Details
-        </div>
-        <div class="card-body table-responsive">
+    <div class="card shadow-sm mb-4"  data-aos="fade-up">
+        <div class="card-header fw-bold"><i class="bi bi-table"></i> Client Report Details</div>
+        <div class="card-body table-responsive"  data-aos="fade-up" data-aos-delay="100">
             <table class="table table-hover align-middle">
                 <thead class="table-light">
                     <tr>
@@ -924,42 +901,34 @@ viewproducts:`<div class="container-fluid animate-fade-in p-4">
                 </thead>
                 <tbody>
                     <tr>
-                        <th>Chaithanya</th><th>chaithu@gmail.com</th><th>10</th><th>&#8377;29,000</th><th><span class="badge bg-success ">Active</span>  </th>
+                        <td>Chaithanya</td><td>chaithu@gmail.com</td><td>10</td><td>&#8377;29,000</td><td><span class="badge bg-success ">Active</span>  </td>
                     </tr>
                     <tr>
-                        <th>Anju</th><th>anjur@gmail.com</th><th>6</th><th>&#8377;6,000</th><th><span class="badge bg-success ">Active</span>  </th>
+                        <td>Anju</td><td>anjur@gmail.com</td><td>6</td><td>&#8377;6,000</td><td><span class="badge bg-success ">Active</span>  </td>
                     </tr>
                     <tr>
-                        <th>Malavika</th><th>malu@gmail.com</th><th>30</th><th>&#8377;2,65,000</th><th><span class="badge bg-success ">Active</span>  </th>
+                        <td>Malavika</td><td>malu@gmail.com</td><td>30</td><td>&#8377;2,65,000</td><td><span class="badge bg-success ">Active</span>  </td>
                     </tr>
                     <tr>
-                        <th>Shradha</th><th>shrad@gmail.com</th><th>1</th><th>&#8377;2,000</th><th><span class="badge bg-secondary ">Inactive</span>  </th>
+                        <td>Shradha</td><td>shrad@gmail.com</td><td>1</td><td>&#8377;2,000</td><td><span class="badge bg-secondary ">Inactive</span>  </td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
-    <div class="card shadow-sm">
-        <div class="card-header fw-bold">
-            <i class="bi bi-bar-chart"></i>Client Order Analysis
-        </div>
-        <div class="card-body">
-        <div class=" sales-chart-box">
-            <canvas id="clchart" height="120"></canvas>
         </div></div>
-    </div>
- </div>`,
+    <div class="card shadow-sm" data-aos="fade-up">
+        <div class="card-header fw-bold"><i class="bi bi-bar-chart"></i> Client Order Analysis</div>
+        <div class="card-body">
+        <div class="sales-chart-box"><canvas id="clientReportChart" height="120"></canvas></div></div>
+    </div></div>`,
     salesReport:`<div class="container-fluid mt-4 animate-fade-in p-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4 class="fw-bold"><i class="bi bi-bar-chart-line"></i> Sales Report</h4>
+        <div><h2 class="fw-bold" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);" data-aos="fade-up"><i class="bi bi-bar-chart-line"></i> Sales Report</h2>
+        <p class="text-muted" style="letter-spacing: 2px;" data-aos="fade-up" data-aos-delay="100">This report provides insights into sales performance and revenue trends</p></div>
         <button class="btn btn-plum shadow-sm px-4" onclick="window.print()"><i class="bi bi-file-earmark-pdf me-2"></i>Export to PDF</button>
     </div>
-    <p class="text-muted">This report provides insights into sales performance and revenue trends</p>
     <div class="card shadow-sm mb-4">
-        <div class="card-header fw-bold">
-            <i class="bi bi-table"></i> Sales Report Details
-        </div>
-        <div class="card-body table-responsive">
+        <div class="card-header fw-bold" data-aos="fade-up"><i class="bi bi-table"></i> Sales Report Details</div>
+        <div class="card-body table-responsive" data-aos="fade-up" data-aos-delay="100">
             <table class="table table-hover align-middle">
                 <thead class="table-light">
                     <tr>
@@ -968,51 +937,43 @@ viewproducts:`<div class="container-fluid animate-fade-in p-4">
                 </thead>
                 <tbody>
                     <tr>
-                        <th>ORD1001</th><th>20 Jan 2026</th><th>Chaithanya</th><th>UPI</th><th><span class="badge bg-success ">Delivered</span>  </th><th>&#8377; 2,000</th>
+                        <td>ORD1001</td><td>20 Jan 2026</td><td>Chaithanya</td><td>UPI</td><td><span class="badge bg-success ">Delivered</span>  </td><td>&#8377; 2,000</td>
                     </tr>
                     <tr>
-                        <th>ORD1002</th><th>21 Jan 2026</th><th>Anju</th><th>Card</th><th><span class="badge bg-warning ">Pending</span>  </th><th>&#8377; 3,500</th>
+                        <td>ORD1002</td><td>21 Jan 2026</td><td>Anju</td><td>Card</td><td><span class="badge bg-warning ">Pending</span>  </td><td>&#8377; 3,500</td>
                     </tr>
                     <tr>
-                        <th>ORD1003</th><th>21 Jan 2026 </th><th>Malavika</th><th>Net</th><th><span class="badge bg-danger ">Cancelled</span>  </th><th>&#8377; 5,000</th>
+                        <td>ORD1003</td><td>21 Jan 2026 </td><td>Malavika</td><td>Net</td><td><span class="badge bg-danger ">Cancelled</span>  </td><td>&#8377; 5,000</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
-    <div class="card shadow-sm">
+        </div></div>
+    <div class="card shadow-sm" data-aos="fade-up">
         <div class="card-header fw-bold">
-            <i class="bi bi-graph-up"></i> Revenue Analysis
-        </div>
+            <i class="bi bi-graph-up"></i> Revenue Analysis</div>
         <div class="card-body">
-            <canvas id="salechart" height="120"></canvas>
+            <canvas id="salesReportChart" height="120"></canvas>
         </div>
-    </div>
- </div>`,
+    </div></div>`,
     noti:`<div class="container-fluid mt-4 animate-fade-in p-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4 class="fw-bold"><i class="bi bi-bell"></i> Notifications</h4>
+        <h2 class="fw-bold" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);" data-aos="fade-up"><i class="bi bi-bell"></i> Notifications</h2>
         <button class="btn btn-outline-primary btn-sm"><i class="bi bi-check2-all"></i> Mark All as Read </button>
     </div>
     <div class="row mb-3 g-3">
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="fade-up">
             <div class="card shadow-sm text-center">
                 <div class="card-body">
-                    <h6>New Notifications</h6>
-                    <h4 class="fw-bold text-warning">5</h4>
-                </div>
+                    <h6>New Notifications</h6><h4 class="fw-bold text-warning">5</h4></div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
             <div class="card shadow-sm text-center">
                 <div class="card-body">
-                    <h6>Read Notifications</h6>
-                    <h4 class="fw-bold text-success">20</h4>
-                </div>
+                    <h6>Read Notifications</h6><h4 class="fw-bold text-success">20</h4></div>
             </div>
-        </div>
-    </div>
-    <div class="card shadow-sm">
+        </div></div>
+    <div class="card shadow-sm" data-aos="fade-up">
         <div class="card-header fw-bold"><i class="bi bi-list-ul"></i> Recent Notifications</div>
         <div class="card-body list-group">
             <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
@@ -1021,50 +982,44 @@ viewproducts:`<div class="container-fluid animate-fade-in p-4">
             </a>
             <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                 <div><i class="bi bi-exclamation-triangle me-2 text-danger"></i>Low stock alert: Designer Silk Saree</div>
-                    <small class="text-muted">21 Jan 2026</small></a>
+                <small class="text-muted">21 Jan 2026</small></a>
             <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                 <div><i class="bi bi-person-plus me-2 text-primary"></i>New client registered: Keerthi</div>
                 <small class="text-muted">21 Jan 2026</small>
             </a>
-        </div>
-    </div>
-</div>`,
-saleshome:`<div class="container-fluid mt-4">
-    <div class="mb-4">
-        <h4 class="fw-bold"><i class="bi bi-speedometer2"></i> Sales Dashboard</h4>
-        <p class="text-muted">Overview of assigned orders and sales performance</p>
+        </div></div></div>`,
+saleshome:`<div class="container-fluid animate-fade-in mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div><h2 class="fw-bold" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"><i class="bi bi-speedometer2"></i> Sales Dashboard</h2>
+        <p class="text-muted" style="letter-spacing: 2px;" data-aos="fade-up" data-aos-delay="100">Overview of assigned orders and sales performance</p></div>
     </div>
     <div class="row g-3 mb-4">
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="fade-up">
             <div class="card shadow-sm text-center">
                 <div class="card-body">
                     <i class="bi bi-box-seam fs-2 text-primary"></i>
-                    <h6 class="mt-2">Assigned Orders</h6>
-                    <h4 class="fw-bold">24</h4>
+                    <h6 class="mt-2">Assigned Orders</h6><h4 class="fw-bold">24</h4>
                 </div></div></div>
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
             <div class="card shadow-sm text-center">
                 <div class="card-body">
                     <i class="bi bi-hourglass-split fs-2 text-warning"></i>
-                    <h6 class="mt-2">Pending Orders</h6>
-                    <h4 class="fw-bold">6</h4>
+                    <h6 class="mt-2">Pending Orders</h6><h4 class="fw-bold">6</h4>
                 </div></div></div>
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
             <div class="card shadow-sm text-center">
                 <div class="card-body">
                     <i class="bi bi-check-circle fs-2 text-success"></i>
-                    <h6 class="mt-2">Completed Orders</h6>
-                    <h4 class="fw-bold">18</h4>
+                    <h6 class="mt-2">Completed Orders</h6><h4 class="fw-bold">18</h4>
                 </div></div></div>
-        <div class="col-md-3">
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
             <div class="card shadow-sm text-center">
                 <div class="card-body">
                     <i class="bi bi-currency-rupee fs-2 text-dark"></i>
-                    <h6 class="mt-2">Today’s Sales</h6>
-                    <h4 class="fw-bold">₹18,450</h4>
+                    <h6 class="mt-2">Today’s Sales</h6><h4 class="fw-bold">₹18,450</h4>
                 </div></div></div></div>
     <div class="row mb-4">
-        <div class="col-md-8">
+        <div class="col-md-8" data-aos="fade-up">
             <div class="card shadow-sm">
                 <div class="card-header fw-bold"><i class="bi bi-list-ul"></i> Recent Orders</div>
                 <div class="card-body table-responsive">
@@ -1083,7 +1038,7 @@ saleshome:`<div class="container-fluid mt-4">
                         </tbody>
                     </table>
                 </div></div></div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up">
             <div class="card shadow-sm">
                 <div class="card-header fw-bold"><i class="bi bi-bell"></i> Notifications</div>
                 <div class="card-body">
@@ -1097,8 +1052,8 @@ saleshome:`<div class="container-fluid mt-4">
   <div class="card shadow-sm border-0 mb-4">
     <div class="card-body">
         <h6 class="fw-bold mb-3"> Sales Performance</h6>
-        <div class=" sales-chart-box">
-            <canvas id="saleschart" height="100"></canvas>
+        <div class="sales-chart-box">
+            <canvas id="salesHomeChart" height="100"></canvas>
         </div></div></div></div>
   <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
     <div class="card shadow-sm border-0">
@@ -1108,25 +1063,19 @@ saleshome:`<div class="container-fluid mt-4">
         <button class="btn btn-outline-secondary btn-sm mb-2"><i class="bi bi-receipt"></i><span> Create Invoice</span></button>
         <button class="btn btn-outline-secondary btn-sm mb-2"><i class="bi bi-people me-1"></i><span> View Clients</span></button>
       </div></div></div></div>`,
-      orders:`<div class="container-fluid mt-4">
+      orders:`<div class="container-fluid animate-fade-in mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4 class="fw-bold"><i class="bi bi-box-seam"></i> Orders Management</h4>
+        <div><h2 class="fw-bold"style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"><i class="bi bi-box-seam"></i> Orders Management</h2>
+        <p class="text-muted" style="letter-spacing:2px;" data-aos="fade-up" data-aos-delay="100">Manage and process all assigned customer orders.</p></div>
         <select class="form-select w-auto">
-            <option selected>All Orders</option>
-            <option>Pending</option>
-            <option>Completed</option>
-            <option>Cancelled</option>
+            <option selected>All Orders</option><option>Pending</option><option>Completed</option><option>Cancelled</option>
         </select>
     </div>
-    <p class="text-muted">Manage and process all assigned customer orders.</p>
-        <div class="card shadow-sm">
-        <div class="card-header fw-bold">
-            <i class="bi bi-list-check"></i> Assigned Orders
-        </div>
-
+        <div class="card shadow-sm" data-aos="fade-up">
+        <div class="card-header fw-bold"><i class="bi bi-list-check"></i> Assigned Orders</div>
         <div class="card-body table-responsive">
             <table class="table table-bordered table-hover align-middle">
-                <thead class="table-dark">
+                <thead class="table-light">
                     <tr>
                         <th>Order ID</th><th>Client</th><th>Products</th><th>Amount</th><th>Payment</th><th>Status</th><th>Action</th></tr>
                 </thead>
@@ -1143,433 +1092,191 @@ saleshome:`<div class="container-fluid mt-4">
                         <td><span class="badge bg-success">Completed</span></td>
                         <td><button class="btn btn-sm btn-secondary"><i class="bi bi-eye"></i></button></td></tr>
                     <tr>
-                        <td>#ORD103</td><td>Ravi</td><td>Shirt (3)</td><td>₹2,150</td>
+                        <td>#ORD103</td><td>Reena</td><td>Lehanga (1)</td><td>₹2,150</td>
                         <td><span class="badge bg-danger">Unpaid</span></td>
                         <td><span class="badge bg-danger">Cancelled</span></td>
                         <td><button class="btn btn-sm btn-secondary"><i class="bi bi-eye"></i></button></td></tr>
                 </tbody>
             </table>
         </div></div></div>`,
-        pendingorders:`<div class="container-fluid mt-4">
-
+        pendingorders:`<div class="container-fluid animate-fade-in mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4 class="fw-bold text-warning">
-            <i class="bi bi-hourglass-split"></i> Pending Orders
-        </h4>
-
-        <span class="badge bg-warning fs-6">
-            6 Pending Orders
-        </span>
+        <div><h2 class="fw-bold"style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"><i class="bi bi-hourglass-split"></i> Pending Orders</h2>
+        <p class="text-muted"style="letter-spacing:2px;" data-aos="fade-up" data-aos-delay="100">Orders that require action due to payment, stock, or verification issues.</p></div>
+        <span class="badge bg-warning fs-6" data-aos="fade-up" data-aos-delay="100">2 Pending Orders</span>
     </div>
-
-    <p class="text-muted">
-        Orders that require action due to payment, stock, or verification issues.
-    </p>
-    <div class="card shadow-sm">
-        <div class="card-header fw-bold">
-            <i class="bi bi-clock-history"></i> Pending Order List
-        </div>
-
+    <div class="card shadow-sm" data-aos="fade-up">
+        <div class="card-header fw-bold"><i class="bi bi-clock-history"></i> Pending Order List</div>
         <div class="card-body table-responsive">
             <table class="table table-bordered table-hover align-middle">
-                <thead class="table-dark">
+                <thead class="table-light">
                     <tr>
-                        <th>Order ID</th>
-                        <th>Client</th>
-                        <th>Product</th>
-                        <th>Amount</th>
-                        <th>Reason</th>
-                        <th>Expected Date</th>
-                        <th>Action</th>
+                        <th>Order ID</th><th>Client</th><th>Product</th><th>Amount</th><th>Reason</th><th>Expected Date</th><th>Action</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
-                        <td>#ORD110</td>
-                        <td>Keerthi</td>
-                        <td>Kurtis (2)</td>
-                        <td>₹3,200</td>
-                        <td>
-                            <span class="badge bg-danger">Payment Pending</span>
-                        </td>
-                        <td>25 Jan 2026</td>
-                        <td>
-                            <button class="btn btn-sm btn-success me-1">
-                                <i class="bi bi-check-circle"></i>
-                            </button>
-                            <button class="btn btn-sm btn-warning me-1">
-                                <i class="bi bi-pause-circle"></i>
-                            </button>
-                            <button class="btn btn-sm btn-danger">
-                                <i class="bi bi-x-circle"></i>
-                            </button>
-                        </td>
+                        <td>#ORD110</td><td>Keerthi</td><td>Kurtis (2)</td><td>₹3,200</td>
+                        <td><span class="badge bg-danger">Payment Pending</span></td><td>25 Jan 2026</td>
+                        <td><button class="btn btn-sm btn-success me-1"><i class="bi bi-check-circle"></i></button>
+                            <button class="btn btn-sm btn-warning me-1"><i class="bi bi-pause-circle"></i></button>
+                            <button class="btn btn-sm btn-danger"><i class="bi bi-x-circle"></i></button></td>
                     </tr>
-
                     <tr>
-                        <td>#ORD109</td>
-                        <td>Anu</td>
-                        <td>Saree (1)</td>
-                        <td>₹5,600</td>
-                        <td>
-                            <span class="badge bg-warning text-dark">Stock Issue</span>
-                        </td>
-                        <td>27 Jan 2026</td>
-                        <td>
-                            <button class="btn btn-sm btn-success me-1">
-                                <i class="bi bi-check-circle"></i>
-                            </button>
-                            <button class="btn btn-sm btn-warning me-1">
-                                <i class="bi bi-pause-circle"></i>
-                            </button>
-                            <button class="btn btn-sm btn-danger">
-                                <i class="bi bi-x-circle"></i>
-                            </button>
-                        </td>
+                        <td>#ORD109</td><td>Anu</td><td>Saree (1)</td><td>₹5,600</td>
+                        <td><span class="badge bg-warning text-dark">Stock Issue</span></td><td>27 Jan 2026</td>
+                        <td><button class="btn btn-sm btn-success me-1"><i class="bi bi-check-circle"></i></button>
+                            <button class="btn btn-sm btn-warning me-1"><i class="bi bi-pause-circle"></i></button>
+                            <button class="btn btn-sm btn-danger"><i class="bi bi-x-circle"></i></button></td>
                     </tr>
-
                 </tbody>
             </table>
-        </div>
-    </div>
-
-</div>`,
-clientdetail:`<div class="container-fluid mt-4">
-
+        </div></div></div>`,
+clientdetail:`<div class="container-fluid animate-fade-in mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <div>
-            <h4 class="fw-bold">
-                <i class="bi bi-people"></i> Clients
-            </h4>
-            <p class="text-muted mb-0">
-                View customer details and communicate regarding orders
-            </p>
-        </div>
-
-        <div class="input-group w-25">
-            <span class="input-group-text">
-                <i class="bi bi-search"></i>
-            </span>
-            <input type="text" class="form-control" placeholder="Search client">
-        </div>
+        <div><h2 class="fw-bold"style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"><i class="bi bi-people"></i> Clients</h2>
+        <p class="text-muted mb-0" data-aos="fade-up" data-aos-delay="100" style="letter-spacing:2px;">View customer details and communicate regarding orders</p></div>
+        <div class="input-group w-25" data-aos="fade-up" data-aos-delay="100"><span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input type="text" class="form-control" placeholder="Search client"></div>
     </div>
-    <div class="row g-3">
-        <div class="col-md-4">
+    <div class="row g-3 mb-4">
+        <div class="col-md-4" data-aos="fade-up">
             <div class="card shadow-sm text-center">
                 <div class="card-body">
                     <i class="bi bi-person-check fs-2 text-success"></i>
-                    <h6 class="mt-2">Active Clients</h6>
-                    <h4 class="fw-bold">18</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
+                    <h6 class="mt-2">Active Clients</h6><h4 class="fw-bold">18</h4>
+                </div></div></div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="card shadow-sm text-center">
                 <div class="card-body">
                     <i class="bi bi-person-plus fs-2 text-primary"></i>
-                    <h6 class="mt-2">New Clients (This Month)</h6>
-                    <h4 class="fw-bold">5</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
+                    <h6 class="mt-2">New Clients (This Month)</h6><h4 class="fw-bold">5</h4>
+                </div></div></div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card shadow-sm text-center">
                 <div class="card-body">
                     <i class="bi bi-arrow-repeat fs-2 text-warning"></i>
-                    <h6 class="mt-2">Repeat Customers</h6>
-                    <h4 class="fw-bold">11</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-    <div class="card shadow-sm mb-mt-4">
-        <div class="card-header fw-bold">
-            <i class="bi bi-card-list"></i> Client List
-        </div>
-
+                    <h6 class="mt-2">Repeat Customers</h6><h4 class="fw-bold">11</h4>
+                </div></div></div></div></div>
+    <div class="card shadow-sm mb-mt-4" data-aos="fade-up">
+        <div class="card-header fw-bold"><i class="bi bi-card-list"></i> Client List</div>
         <div class="card-body table-responsive">
-            <table class="table table-hover align-middle">
-                <thead class="table-dark">
+            <table class="table table-bordered table-hover align-middle">
+                <thead class="table-light">
                     <tr>
-                        <th>Client ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Total Orders</th>
-                        <th>Last Order</th>
-                        <th>Status</th>
-                        <th>Action</th>
+                        <th>Client ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Total Orders</th><th>Last Order</th><th>Status</th><th>Action</th>
                     </tr>
                 </thead>
-
-                <tbody>
+                <tbody class="align-middle">
                     <tr>
-                        <td>C001</td>
-                        <td>Keerthi</td>
-                        <td>keerthi@gmail.com</td>
-                        <td>9876543210</td>
-                        <td>8</td>
-                        <td>20 Jan 2026</td>
-                        <td><span class="badge bg-success">Active</span></td>
-                        <td>
-                            <button class="btn btn-sm btn-primary me-1">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                            <button class="btn btn-sm btn-success">
-                                <i class="bi bi-telephone"></i>
-                            </button>
-                        </td>
+                        <td>C001</td><td>Keerthi</td><td>keerthi@gmail.com</td><td>9876543210</td><td>8</td><td>20 Jan 2026</td><td><span class="badge bg-success">Active</span></td>
+                        <td><button class="btn btn-sm btn-primary me-1"><i class="bi bi-eye"></i></button>
+                            <button class="btn btn-sm btn-success"><i class="bi bi-telephone"></i></button></td>
                     </tr>
-
                     <tr>
-                        <td>C002</td>
-                        <td>Anu</td>
-                        <td>anu@gmail.com</td>
-                        <td>9123456780</td>
-                        <td>3</td>
-                        <td>18 Jan 2026</td>
-                        <td><span class="badge bg-success">Active</span></td>
-                        <td>
-                            <button class="btn btn-sm btn-primary me-1">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                            <button class="btn btn-sm btn-success">
-                                <i class="bi bi-telephone"></i>
-                            </button>
-                        </td>
+                        <td>C002</td><td>Anu</td><td>anu@gmail.com</td><td>9123456780</td><td>3</td><td>18 Jan 2026</td><td><span class="badge bg-success">Active</span></td>
+                        <td><button class="btn btn-sm btn-primary me-1"><i class="bi bi-eye"></i></button>
+                            <button class="btn btn-sm btn-success"><i class="bi bi-telephone"></i></button></td>
                     </tr>
-
                     <tr>
-                        <td>C003</td>
-                        <td>Ravi</td>
-                        <td>ravi@gmail.com</td>
-                        <td>9001122334</td>
-                        <td>0</td>
-                        <td>-</td>
-                        <td><span class="badge bg-secondary">Inactive</span></td>
-                        <td>
-                            <button class="btn btn-sm btn-primary me-1">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                            <button class="btn btn-sm btn-success">
-                                <i class="bi bi-telephone"></i>
-                            </button>
-                        </td>
+                        <td>C003</td><td>Ravi</td><td>ravi@gmail.com</td><td>9001122334</td><td>0</td><td>  - </td><td><span class="badge bg-secondary">Inactive</span></td>
+                        <td><button class="btn btn-sm btn-primary me-1"><i class="bi bi-eye"></i></button>
+                            <button class="btn btn-sm btn-success"><i class="bi bi-telephone"></i></button></td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>    `,
-    transactions:`<div class="container-fluid mt-4">
-
+        </div></div> `,
+    transactions:`<div class="container-fluid animate-fade-in mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <div>
-            <h4 class="fw-bold">
-                <i class="bi bi-credit-card"></i> Transactions
-            </h4>
-            <p class="text-muted mb-0">
-                View and track customer payment transactions
-            </p>
-        </div>
-
-        <select class="form-select w-auto">
-            <option selected>All Payments</option>
-            <option>Paid</option>
-            <option>Pending</option>
-            <option>Failed</option>
-        </select>
+        <div><h2 class="fw-bold"style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"><i class="bi bi-credit-card"></i> Transactions</h2>
+        <p class="text-muted mb-0" data-aos="fade-up" data-aos-delay="100" style="letter-spacing:2px:">View and track customer payment transactions </p></div>
+        <select class="form-select w-auto" data-aos="fade-up" data-aos-delay="100"><option selected>All Payments</option><option>Paid</option><option>Pending</option><option>Failed</option></select>
     </div>
-    <div class="card shadow-sm">
-        <div class="card-header fw-bold">
-            <i class="bi bi-receipt"></i> Transaction History
-        </div>
-
+    <div class="card shadow-sm" data-aos="fade-up">
+        <div class="card-header fw-bold"><i class="bi bi-receipt"></i> Transaction History</div>
         <div class="card-body table-responsive">
             <table class="table table-bordered table-hover align-middle">
-                <thead class="table-dark">
+                <thead class="table-light">
                     <tr>
-                        <th>Transaction ID</th>
-                        <th>Order ID</th>
-                        <th>Client</th>
-                        <th>Payment Mode</th>
-                        <th>Amount</th>
-                        <th>Status</th>
-                        <th>Date</th>
+                        <th>Transaction ID</th><th>Order ID</th><th>Client</th><th>Payment Mode</th><th>Amount</th><th>Status</th><th>Date</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
-                        <td>TXN501</td>
-                        <td>#ORD105</td>
-                        <td>Keerthi</td>
-                        <td>UPI</td>
-                        <td>₹3,200</td>
-                        <td><span class="badge bg-success">Paid</span></td>
-                        <td>20 Jan 2026</td>
+                        <td>TXN501</td><td>#ORD105</td><td>Keerthi</td><td>UPI</td><td>₹3,200</td><td><span class="badge bg-success">Paid</span></td><td>20 Jan 2026</td>
                     </tr>
-
                     <tr>
-                        <td>TXN502</td>
-                        <td>#ORD106</td>
-                        <td>Anu</td>
-                        <td>Credit Card</td>
-                        <td>₹5,600</td>
-                        <td><span class="badge bg-success">Paid</span></td>
-                        <td>19 Jan 2026</td>
+                        <td>TXN502</td><td>#ORD106</td><td>Anu</td><td>Credit Card</td><td>₹5,600</td><td><span class="badge bg-success">Paid</span></td><td>19 Jan 2026</td>
                     </tr>
-
                     <tr>
-                        <td>TXN503</td>
-                        <td>#ORD107</td>
-                        <td>Ravi</td>
-                        <td>Cash on Delivery</td>
-                        <td>₹2,150</td>
-                        <td><span class="badge bg-warning text-dark">Pending</span></td>
-                        <td>18 Jan 2026</td>
+                        <td>TXN503</td><td>#ORD107</td><td>Ravi</td><td>Cash on Delivery</td><td>₹2,150</td><td><span class="badge bg-warning text-dark">Pending</span></td><td>18 Jan 2026</td>
                     </tr>
-
                     <tr>
-                        <td>TXN504</td>
-                        <td>#ORD108</td>
-                        <td>Meena</td>
-                        <td>Debit Card</td>
-                        <td>₹4,800</td>
-                        <td><span class="badge bg-danger">Failed</span></td>
-                        <td>18 Jan 2026</td>
+                        <td>TXN504</td><td>#ORD108</td><td>Meena</td><td>Debit Card</td><td>₹4,800</td><td><span class="badge bg-danger">Failed</span></td><td>18 Jan 2026</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div></div></div>`,
+offersproducts:`<div class="container-fluid animate-fade-in mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div><h2 class="fw-bold"style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"><i class="bi bi-tags"></i> Offers & New Products</h2>
+        <p class="text-muted" data-aos="fade-up" data-aos-delay="100" style-"letter-spacing:2px;">Manage promotional offers and newly launched products</p></div>
     </div>
-</div>`,
-offersproducts:`<div class="container-fluid mt-4">
-
-    <div class="mb-3">
-        <h4 class="fw-bold">
-            <i class="bi bi-tags"></i> Offers & New Products
-        </h4>
-        <p class="text-muted">
-            Manage promotional offers and newly launched products
-        </p>
-    </div>
-    <div class="card shadow-sm mb-4">
-        <div class="card-header fw-bold">
-            <i class="bi bi-megaphone"></i> Active Offers
-        </div>
-
+    <div class="card shadow-sm mb-4" data-aos="fade-up">
+        <div class="card-header fw-bold"><i class="bi bi-megaphone"></i> Active Offers</div>
         <div class="card-body table-responsive">
             <table class="table table-bordered table-hover align-middle">
-                <thead class="table-dark">
+                <thead class="table-light">
                     <tr>
-                        <th>Offer ID</th>
-                        <th>Offer Name</th>
-                        <th>Discount</th>
-                        <th>Valid Till</th>
-                        <th>Status</th>
+                        <th>Offer ID</th><th>Offer Name</th><th>Discount</th><th>Valid Till</th><th>Status</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
-                        <td>OFF101</td>
-                        <td>New Year Sale</td>
-                        <td>30%</td>
-                        <td>31 Jan 2026</td>
-                        <td><span class="badge bg-success">Active</span></td>
+                        <td>OFF101</td><td>New Year Sale</td><td>30%</td><td>31 Jan 2026</td><td><span class="badge bg-success">Active</span></td>
                     </tr>
-
                     <tr>
-                        <td>OFF102</td>
-                        <td>Festive Combo</td>
-                        <td>20%</td>
-                        <td>25 Jan 2026</td>
-                        <td><span class="badge bg-success">Active</span></td>
+                        <td>OFF102</td><td>Festive Combo</td><td>20%</td><td>25 Jan 2026</td><td><span class="badge bg-success">Active</span></td>
                     </tr>
-
                     <tr>
-                        <td>OFF103</td>
-                        <td>Clearance Sale</td>
-                        <td>40%</td>
-                        <td>15 Jan 2026</td>
-                        <td><span class="badge bg-secondary">Expired</span></td>
+                        <td>OFF103</td><td>Clearance Sale</td><td>40%</td><td>15 Jan 2026</td><td><span class="badge bg-secondary">Expired</span></td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
-    <div class="card shadow-sm">
-        <div class="card-header fw-bold">
-            <i class="bi bi-box-seam"></i> Newly Added Products
-        </div>
-
+        </div></div>
+    <div class="card shadow-sm" data-aos="fade-up">
+        <div class="card-header fw-bold"><i class="bi bi-box-seam"></i> Newly Added Products</div>
         <div class="card-body table-responsive">
             <table class="table table-bordered table-hover align-middle">
-                <thead class="table-dark">
+                <thead class="table-light">
                     <tr>
-                        <th>Product ID</th>
-                        <th>Product Name</th>
-                        <th>Category</th>
-                        <th>Price</th>
-                        <th>Stock</th>
-                        <th>Launch Date</th>
-                        <th>Status</th>
+                        <th>Product ID</th><th>Product Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Launch Date</th><th>Status</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
-                        <td>P201</td>
-                        <td>Silk Saree</td>
-                        <td>Traditional Wear</td>
-                        <td>₹6,500</td>
-                        <td>15</td>
-                        <td>20 Jan 2026</td>
-                        <td><span class="badge bg-success">Available</span></td>
+                        <td>P201</td><td>Silk Saree</td><td>Traditional Wear</td><td>₹6,500</td><td>15</td><td>20 Jan 2026</td><td><span class="badge bg-success">Available</span></td>
                     </tr>
-
                     <tr>
-                        <td>P202</td>
-                        <td>Designer Kurti</td>
-                        <td>Ethnic Wear</td>
-                        <td>₹2,800</td>
-                        <td>25</td>
-                        <td>18 Jan 2026</td>
-                        <td><span class="badge bg-success">Available</span></td>
+                        <td>P202</td><td>Designer Kurti</td><td>Ethnic Wear</td><td>₹2,800</td><td>25</td><td>18 Jan 2026</td><td><span class="badge bg-success">Available</span></td>
                     </tr>
-
                     <tr>
-                        <td>P203</td>
-                        <td>Party Gown</td>
-                        <td>Western Wear</td>
-                        <td>₹4,200</td>
-                        <td>0</td>
-                        <td>15 Jan 2026</td>
-                        <td><span class="badge bg-danger">Out of Stock</span></td>
+                        <td>P203</td><td>Party Gown</td><td>Western Wear</td><td>₹4,200</td><td>0</td><td>15 Jan 2026</td><td><span class="badge bg-danger">Out of Stock</span></td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
-
-</div>`,
+    </div></div></div>`,
 salesreport:`<div class="container-fluid mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4 class="fw-bold"><i class="bi bi-graph-up-arrow"></i> Sales Report</h4>
-        <button class="btn btn-outline-danger"><i class="bi bi-file-earmark-pdf"></i> Export to PDF</button>
+        <div><h2 class="fw-bold" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"><i class="bi bi-graph-up-arrow"></i> Sales Report</h2>
+        <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Overview of sales performance and revenue generated by sales staff.</p></div>
+        <button class="btn btn-outline-danger" data-aos="fade-up" data-aos-delay="100"><i class="bi bi-file-earmark-pdf"></i> Export to PDF</button>
     </div>
-    <p class="text-muted">Overview of sales performance and revenue generated by sales staff.</p>
-    <div class="card shadow-sm mb-4">
+    <div class="card shadow-sm mb-4" data-aos="fade-up">
         <div class="card-header fw-bold"><i class="bi bi-table"></i> Sales Report Details</div>
         <div class="card-body table-responsive">
             <table class="table table-bordered table-hover align-middle">
-                <thead class="table-dark">
+                <thead class="table-light">
                     <tr>
                         <th>Sales ID</th><th>Sales Staff</th><th>Total Orders</th><th>Total Sales</th><th>Commission</th><th>Performance</th></tr>
                 </thead>
@@ -1586,14 +1293,43 @@ salesreport:`<div class="container-fluid mt-4">
                 </tbody>
             </table>
         </div></div>
-    <div class="card shadow-sm">
+    <div class="card shadow-sm" data-aos="fade-up">
         <div class="card-header fw-bold"><i class="bi bi-bar-chart-fill"></i> Sales Performance Chart</div>
         <div class="card-body">
-            <canvas id="salesChart" height="120"></canvas>
+            <canvas id="salechart" height="120"></canvas>
         </div></div></div>`,
 
-deliveryhome:`<div class="container-fluid mt-4">
-    <h4 class="fw-bold mb-4"><i class="bi bi-truck"></i> Delivery Dashboard</h4>
+    notifications:`<div class="container-fluid animate-fade-in mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="fw-bold"style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"data-aos="fade-up">Notifications</h2>
+    </div>
+    <div class="card shadow-sm" data-aos="fade-up">
+        <div class="card-header fw-bold">Recent Notifications</div>
+        <div class="card-body p-0">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-bag-check-fill text-primary me-2"></i>New order <strong>#ORD310</strong> placed by client</span>
+                    <span><span class="badge bg-danger me-2">New</span><small class="text-muted">5 mins ago</small></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-currency-rupee text-success me-2"></i>Payment received for order <strong>#ORD301</strong></span>
+                    <small class="text-muted">30 mins ago</small>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Low stock alert for <strong>Wireless Headphones</strong></span>
+                    <small class="text-muted">2 hours ago</small>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-megaphone-fill text-info me-2"></i>Admin added a new discount offer</span>
+                    <small class="text-muted">Yesterday</small>
+                </li>
+            </ul>
+        </div></div></div>`,
+
+deliveryhome:`<div class="container-fluid animate-fade-in mt-4">
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <div><h2 class="fw-bold mb-1" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"><i class="bi bi-truck"></i> Delivery Dashboard</h4></div>
+</div>
     <div class="row mb-4">
         <div class="col-md-3" data-aos="fade-up">
             <div class="card shadow-sm text-center">
@@ -1626,8 +1362,8 @@ deliveryhome:`<div class="container-fluid mt-4">
     <div class="card shadow-sm mb-4">
         <div class="card-header fw-bold"><i class="bi bi-list-check"></i> Today’s Deliveries</div>
         <div class="card-body table-responsive" data-aos="fade-up">
-            <table class="table table-hover align-middle">
-                <thead class="table-secondary">
+            <table class="table table-bordered table-hover align-middle">
+                <thead class="table-light">
                     <tr>
                         <th>Order ID</th><th>Customer</th><th>Address</th><th>Status</th><th>Action</th></tr>
                 </thead>
@@ -1657,13 +1393,14 @@ deliveryhome:`<div class="container-fluid mt-4">
             <button class="btn btn-outline-warning me-2 mb-2"><i class="bi bi-telephone"></i> Contact Customer</button>
         </div></div></div></div></div>`,
 
-    assignedOrders:`<div class="container-fluid mt-4">
-        <h4 class="fw-bold mb-4"><i class="bi bi-box-seam"></i> Assigned Orders</h4>
+    assignedOrders:`<div class="container-fluid animate-fade-in mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="fw-bold mb-4" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"><i class="bi bi-box-seam"></i> Assigned Orders</h2></div>
         <div class="card shadow-sm" data-aos="fade-up">
         <div class="card-header fw-bold"><i class="bi bi-list-task"></i> Orders Assigned to You</div>
         <div class="card-body table-responsive">
             <table class="table table-bordered table-hover align-middle">
-                <thead class="table-secondary">
+                <thead class="table-light">
                     <tr>
                         <th>Order ID</th><th>Customer Name</th><th>Delivery Address</th><th>Order Date</th><th>Status</th><th>Action</th></tr>
                 </thead>
@@ -1684,13 +1421,15 @@ deliveryhome:`<div class="container-fluid mt-4">
             </table>
         </div></div></div>`,
 
-    pendingDeliveries:`<div class="container-fluid mt-4">
-        <h4 class="fw-bold mb-4"><i class="bi bi-hourglass-split"></i> Pending Deliveries</h4>
+    pendingDeliveries:`<div class="container-fluid animate-fade-in mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+         <h2 class="fw-bold mb-4" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"><i class="bi bi-hourglass-split"></i> Pending Deliveries</h2>
+    </div>
         <div class="card shadow-sm" data-aos="fade-up">
         <div class="card-header fw-bold">Pending Delivery Orders</div>
         <div class="card-body table-responsive">
             <table class="table table-bordered table-hover align-middle">
-                <thead class="table-secondary">
+                <thead class="table-light">
                     <tr>
                         <th>Order ID</th><th>Customer</th><th>Phone</th><th>Address</th><th>Status</th><th>Action</th></tr>
                 </thead>
@@ -1707,13 +1446,15 @@ deliveryhome:`<div class="container-fluid mt-4">
             </table>
         </div></div></div>`,
 
-    completedDeliveries:`<div class="container-fluid mt-4">
-       <h4 class="fw-bold mb-4"><i class="bi bi-check-circle"></i> Completed Deliveries</h4>
+    completedDeliveries:`<div class="container-fluid animate-fade-in mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="fw-bold mb-4" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"><i class="bi bi-check-circle"></i> Completed Deliveries</h2>
+    </div>
         <div class="card shadow-sm" data-aos="fade-up">
         <div class="card-header fw-bold">Delivery History</div>
         <div class="card-body table-responsive">
-            <table class="table table-striped align-middle">
-                <thead class="table-dark">
+            <table class="table table-bordered align-middle">
+                <thead class="table-light">
                     <tr>
                         <th>Order ID</th><th>Customer</th><th>Delivery Date</th><th>Payment Mode</th><th>Status</th></tr>
                 </thead>
@@ -1728,8 +1469,10 @@ deliveryhome:`<div class="container-fluid mt-4">
             </table>
         </div></div></div>`,
 
-    deliveryStatus:`<div class="container-fluid mt-4">
-        <h4 class="fw-bold mb-4"><i class="bi bi-arrow-repeat"></i> Update Delivery Status</h4>
+    deliveryStatus:`<div class="container-fluid animate-fade-in mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="fw-bold mb-4" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"> Update Delivery Status</h2>
+    </div>
         <div class="card shadow-sm" data-aos="fade-up" >
         <div class="card-header fw-bold">Update Order Status</div>
         <div class="card-body">
@@ -1757,8 +1500,10 @@ deliveryhome:`<div class="container-fluid mt-4">
             </form>
         </div></div></div>` ,
 
-    deliveryNotifications:`<div class="container-fluid mt-4">
-        <h4 class="fw-bold mb-4"><i class="bi bi-bell"></i> Notifications</h4>
+    deliveryNotifications:`<div class="container-fluid animate-fade-in  mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+         <h2 class="fw-bold mb-4" style="font-family: 'Playfair Display'; letter-spacing: 2px; color: var(--plum);"  data-aos="fade-up"> Notifications</h2>
+    </div>
         <div class="card shadow-sm" data-aos="fade-up" >
         <div class="card-header fw-bold">Recent Notifications</div>
         <div class="card-body">
@@ -1828,21 +1573,29 @@ deliveryhome:`<div class="container-fluid mt-4">
 
     // 4. NAVIGATION LOGIC
     function loadContent(pageKey, element) {
-        const contentArea = document.getElementById('dashboardContent');
-        // 1. Swap HTML
-        if (pages[pageKey]) {
-            contentArea.innerHTML = pages[pageKey];
-        } else {
-            contentArea.innerHTML = `<h2 class="fw-bold">${pageKey.toUpperCase()}</h2><p>This module is coming soon.</p>`;
-        }
-        if (pageKey === 'home') {
-        startCountdown();
-    }// 2. Manage Active State for sidebar links
-        document.querySelectorAll('.nav-link-dash').forEach(link => link.classList.remove('active'));
-        if (element) {
-            element.classList.add('active');
-        }
-    }
+  const contentArea = document.getElementById("dashboardContent");
+  contentArea.innerHTML = pages[pageKey] || "<h3>Coming Soon</h3>";
+
+  document.querySelectorAll('.nav-link-dash').forEach(l => l.classList.remove('active'));
+  if (element) element.classList.add('active');
+
+  if (pageKey === "adminhome") {
+    initAdminSalesChart();
+  }
+  else if (pageKey === "saleshome") {
+    initSalesHomeChart();
+  }
+  else if (pageKey === "salesReport") {
+    initSalesReportChart();
+  }
+  else if (pageKey === "clientReport") {
+    initClientReportChart();
+  }
+  else if(pageKey === "salesreport"){
+    initSalesChart();
+  }
+}
+
 function init() {
     const role = user.role || 'Client';
     document.getElementById('sidebarMenu').innerHTML = sidebarConfigs[role] || sidebarConfigs.Client;
@@ -1887,4 +1640,112 @@ function copyCoupon(code, btn) {
         btn.classList.replace('btn-success', 'btn-plum');
     }, 2000);
 }
+function loadpage(page){
+    const container=document.getElementById("main-content");
+    container.innerHTML=pages[page];
+    if (page === 'clientReport') {
+        initClientChart();
+    }
+    if (page === 'adminhome') {
+        initSalesOverviewChart();
+    }
+    if(page==='salesReport'){
+        initStaffPerformanceChart(); // This handles the "two more" charts
+    }
+    if(page==='salesreport'){
+        initSalesHomeChart();
+    }
+}
+function initClientReportChart() {
+  const ctx = document.getElementById("clientReportChart");
+  if (!ctx) return;
+  destroyChart();
+
+  activeChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["Chaithanya","Anju","Malavika","Shradha"],
+      datasets: [{
+        label: "Orders",
+        data: [10,6,30,1]
+      }]
+    }
+  });
+}
+ function initSalesChart(){
+    const ctx = document.getElementById("salechart");
+  if (!ctx) return;
+  destroyChart();
+
+  activeChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["Chaithanya","Anju","Malavika","Shradha"],
+      datasets: [{
+        label: "Orders",
+        data: [10,6,30,1]
+      }]
+    }
+  });
+ }
+
+function initAdminSalesChart() {
+  const ctx = document.getElementById("adminSalesChart");
+  if (!ctx) return;
+  destroyChart();
+
+  activeChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Jan","Feb","Mar","Apr","May","Jun"],
+      datasets: [{
+        label: "Total Sales",
+        data: [12000, 19000, 15000, 22000, 18000, 25000],
+        borderWidth: 2
+      }]
+    }
+  });
+}
+function initSalesHomeChart() {
+  const ctx = document.getElementById("salesHomeChart");
+  if (!ctx) return;
+  destroyChart();
+
+  activeChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["Mon","Tue","Wed","Thu","Fri","Sat"],
+      datasets: [{
+        label: "Daily Sales",
+        data: [5000,7000,6000,9000,8000,11000]
+      }]
+    }
+  });
+}
+function initSalesReportChart() {
+  const ctx = document.getElementById("salesReportChart");
+  if (!ctx) return;
+  destroyChart();
+
+  activeChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Week 1","Week 2","Week 3","Week 4"],
+      datasets: [{
+        label: "Weekly Revenue",
+        data: [45000,52000,48000,61000]
+      }]
+    }
+  });
+}
+
+let activeChart = null;
+
+function destroyChart() {
+  if (activeChart) {
+    activeChart.destroy();
+    activeChart = null;
+  }
+}
+
 init();
