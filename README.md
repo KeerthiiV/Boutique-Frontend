@@ -16,7 +16,6 @@ This project demonstrates a multi-user interface with separate layouts for Admin
 - JavaScript  
 
 ## 👥 User Interfaces
-
 - 👩‍💼 Admin Dashboard  
 - 💼 Sales Panel  
 - 👗 Customer Pages  
@@ -24,4 +23,7 @@ This project demonstrates a multi-user interface with separate layouts for Admin
 
 ## 🎯 Purpose
 Built to practice frontend development, responsive design, and structured UI implementation during internship training.
+
+## 🔗 Live Demo
+👉 [View Website]([https://yourusername.github.io/repository-name/](https://keerthiiv.github.io/Boutique-Frontend/))
 
