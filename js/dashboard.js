@@ -1528,7 +1528,7 @@ deliveryhome:`<div class="container-fluid animate-fade-in mt-4">
     <div class="d-flex flex-column p-3 sidebar-admin-custom" style="min-height: 100vh;">
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item"><a href="#" class="nav-link-dash active mb-1" onclick="loadContent('adminhome', this)"><i class="bi bi-house me-2"></i> Home </a></li>
-            <li><a class="nav-link-dash dropdown-toggle-custom mb-1" data-bs-toggle="collapse" href="#userMgmt"><i class="bi bi-people me-2"></i> User Management </a>
+            <li><a class="nav-link-dash dropdown-toggle-custom mb-1" data-bs-toggle="collapse" href="#userMgmt"><i class="bi bi-people me-2"></i> User Role </a>
                 <div class="collapse ps-3" id="userMgmt"><a href="#" class="nav-link-dash small" onclick="loadContent('clients', this)">Clients </a><a href="#" class="nav-link-dash small" onclick="loadContent('salesStaff', this)">Sales Staff </a><a href="#" class="nav-link-dash small" onclick="loadContent('deliveryStaff', this)">Delivery Staff </a></div></li>
             <li class="nav-item"><a href="#" class="nav-link-dash active mb-1" onclick="loadContent('viewproducts', this)"><i class="bi bi-house me-2"></i> Products </a></li>
             <li class="nav-item"><a href="#" class="nav-link-dash active mb-1" onclick="loadContent('allorders', this)"><i class="bi bi-box-seam me-2"></i> Orders </a></li>
@@ -1548,12 +1548,12 @@ deliveryhome:`<div class="container-fluid animate-fade-in mt-4">
             <a onclick="loadContent('wishlist', this)" class="nav-link-dash"><i class="bi bi-heart me-2"></i> Wishlist</a>
             <div class="px-3 mt-4 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;">Settings</div>
             <a onclick="loadContent('address',this)" class="nav-link-dash"><i class="bi bi-geo-alt me-2"></i> Saved Addresses</a>
-            <a onclick="loadContent('paymentmethod',this)" class="nav-link-dash"><i class="bi bi-wallet2 me-2"></i> Payment Methods</a>
+            <a onclick="loadContent('paymentmethod',this)" class="nav-link-dash"><i class="bi bi-wallet2 me-2"></i> Payments</a>
             <a onclick="loadContent('notification',this)" class="nav-link-dash"><i class="bi bi-bell me-2"></i> Notifications</a>`,
     
     Sales:`<div class="px-3 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;"> DASHBOARD</div>
         <a href="#" onclick="loadContent('saleshome', this)" class="nav-link-dash"><i class="bi bi-house me-2"></i> Home</a></li>
-        <a href="#" onclick="loadContent('orders', this)" class="nav-link-dash"><i class="bi bi-box-seam me-2"></i> Orders Management</a></li>
+        <a href="#" onclick="loadContent('orders', this)" class="nav-link-dash"><i class="bi bi-box-seam me-2"></i> Orders</a></li>
         <a href="#" onclick="loadContent('pendingorders', this)" class="nav-link-dash"><i class="bi bi-hourglass-split me-2"></i> Pending Orders</a></li>
         <a href="#" onclick="loadContent('clientdetail', this)" class="nav-link-dash"><i class="bi bi-people me-2"></i> Clients</a></li>
         <a href="#" onclick="loadContent('transactions', this)" class="nav-link-dash"><i class="bi bi-credit-card me-2"></i> Transactions</a></li>
@@ -1563,10 +1563,10 @@ deliveryhome:`<div class="container-fluid animate-fade-in mt-4">
     </div>`,
     Delivery:`<div class="px-3 mb-2 small text-uppercase opacity-50 fw-bold" style="font-size: 0.7rem;"> DASHBOARD</div>
         <a href="#" class="nav-link-dash" onclick="loadContent('deliveryhome', this)"><i class="bi bi-house me-2"></i> Home</a></li>
-        <a href="#" class="nav-link-dash" onclick="loadContent('assignedOrders', this)"><i class="bi bi-box-seam me-2"></i> Assigned Orders</a></li>
-        <a href="#" class="nav-link-dash" onclick="loadContent('pendingDeliveries', this)"><i class="bi bi-hourglass-split "></i> Pending Deliveries</a></li>
-        <a href="#" class="nav-link-dash" onclick="loadContent('completedDeliveries', this)"><i class="bi bi-check-circle "></i> Completed Deliveries</a></li>
-        <a href="#" class="nav-link-dash" onclick="loadContent('deliveryStatus', this)"><i class="bi bi-arrow-repeat me-2"></i> Update Status</a></li>
+        <a href="#" class="nav-link-dash" onclick="loadContent('assignedOrders', this)"><i class="bi bi-box-seam me-2"></i> Assigned</a></li>
+        <a href="#" class="nav-link-dash" onclick="loadContent('pendingDeliveries', this)"><i class="bi bi-hourglass-split me-2"></i> In Transit</a></li>
+        <a href="#" class="nav-link-dash" onclick="loadContent('completedDeliveries', this)"><i class="bi bi-check-circle me-2"></i> Completed</a></li>
+        <a href="#" class="nav-link-dash" onclick="loadContent('deliveryStatus', this)"><i class="bi bi-arrow-repeat me-2"></i> Status</a></li>
         <a href="#" class="nav-link-dash" onclick="loadContent('deliveryNotifications', this)"><i class="bi bi-bell me-2"></i> Notifications</a></li>
     </div>`
     };
