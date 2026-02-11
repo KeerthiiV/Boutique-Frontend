@@ -25,5 +25,5 @@ This project demonstrates a multi-user interface with separate layouts for Admin
 Built to practice frontend development, responsive design, and structured UI implementation during internship training.
 
 ## 🔗 Live Demo
-👉 [View Website]([https://yourusername.github.io/repository-name/](https://keerthiiv.github.io/Boutique-Frontend/))
+👉 [View Website](https://keerthiiv.github.io/Boutique-Frontend/)
 
