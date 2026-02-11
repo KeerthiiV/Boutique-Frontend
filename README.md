@@ -1,4 +1,4 @@
-# 👗 Elegance Boutique
+#  Elegance Boutique
 A responsive dummy Ladies Boutique website developed as part of my internship learning experience.
 This project demonstrates a multi-user interface with separate layouts for Admin, Sales, Customer, and Delivery roles.
 
